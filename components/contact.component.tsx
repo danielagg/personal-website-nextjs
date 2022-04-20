@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "./button";
 
 export const Contact = () => {
@@ -8,7 +8,19 @@ export const Contact = () => {
   const [userTriedSubmittingAtLeastOnce, setUserTriedSubmittingAtLeastOnce] =
     useState(false);
 
+  const [trackingErrors, setTrackingErrors] = useState(true);
+
   const [isSubmitSuccess, setIsSubmitSuccess] = useState(false);
+  const [isSubmitFailure, setIsSubmitFailure] = useState(false);
+
+  useEffect(() => {
+    setTrackingErrors(!!(name || email || message));
+  }, [name, email, message]);
+
+  const hasValidationErrors =
+    (!name || !email || !message) &&
+    userTriedSubmittingAtLeastOnce &&
+    trackingErrors;
 
   const onSubmit = async () => {
     if (name && email && message) {
@@ -32,13 +44,23 @@ export const Contact = () => {
         }
 
         setIsSubmitSuccess(true);
-        setName("");
-        setEmail("");
-        setMessage("");
         setTimeout(() => {
           setIsSubmitSuccess(false);
         }, 4000);
+
+        // reset form
+        setName("");
+        setEmail("");
+        setMessage("");
+
+        // reset validation handling
+        setUserTriedSubmittingAtLeastOnce(false);
+        setTrackingErrors(false);
       } catch (error) {
+        setIsSubmitFailure(true);
+        setTimeout(() => {
+          setIsSubmitFailure(false);
+        }, 4000);
         console.error(error);
       }
     }
@@ -51,9 +73,7 @@ export const Contact = () => {
         text="Send"
         onClick={async () => {
           setUserTriedSubmittingAtLeastOnce(true);
-
-          const res = await onSubmit();
-          console.log(res);
+          await onSubmit();
         }}
       />
     );
@@ -110,15 +130,21 @@ export const Contact = () => {
             </div>
           </div>
 
-          {!name && !email && !message && userTriedSubmittingAtLeastOnce && (
+          {hasValidationErrors && (
             <div className="mt-6">
-              <Error />
+              <ValidationError />
             </div>
           )}
 
           {isSubmitSuccess && (
             <div className="mt-6">
               <Success />
+            </div>
+          )}
+
+          {isSubmitFailure && (
+            <div className="mt-6">
+              <SubmitError />
             </div>
           )}
         </div>
@@ -158,7 +184,7 @@ const TextInput = ({
   );
 };
 
-const Error = () => {
+const ValidationError = () => {
   return (
     <div className="flex items-start lg:items-center space-x-2 text-sm">
       <svg
@@ -202,6 +228,30 @@ const Success = () => {
       </svg>
       <div className="w-3/4">
         Thank you! Your message was successfully sent to me.
+      </div>
+    </div>
+  );
+};
+
+const SubmitError = () => {
+  return (
+    <div className="flex items-start lg:items-center space-x-2 text-sm">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-8 w-8"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth={2}
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+        />
+      </svg>
+      <div className="w-3/4">
+        Sorry, your message could not be sent. Please try again later.
       </div>
     </div>
   );
