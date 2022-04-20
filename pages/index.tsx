@@ -7,7 +7,7 @@ import { Navbar } from "../components/navbar";
 
 const Home: NextPage = () => {
   return (
-    <div className="font-heebo text-gray-700">
+    <div className="font-heebo text-gray-700 scroll-smooth">
       <Head>
         <title>Daniel Agg</title>
         <meta

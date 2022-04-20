@@ -205,7 +205,7 @@ const TextInput = ({
         id={id}
         name={id}
         value={value}
-        className="appearance-none text-gray-700 p-2 rounded mt-1 w-full"
+        className="appearance-none text-gray-700 p-2 rounded mt-1 w-full placeholder:text-sm"
         onChange={(e) => setValue(e.target.value)}
         placeholder={placeHolder}
       />

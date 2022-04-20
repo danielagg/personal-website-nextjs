@@ -25,9 +25,9 @@ export const About = () => {
         <div className="w-full lg:w-1/2 flex flex-col space-y-8">
           <p>
             I&apos;ve started my career as a .NET developer, working almost
-            exclusively on ASP.NET Core backends, before deciding to immerse
-            myself in the world of modern frontend development, aiming to become
-            a competent full-stack engineer.
+            exclusively on ASP.NET and ASP.NET Core backends, before deciding to
+            immerse myself in the world of modern frontend development, aiming
+            to become a competent full-stack engineer.
           </p>
 
           <p>
@@ -68,7 +68,7 @@ export const About = () => {
             period="2016 - 2018"
             employerName="Atos Consulting"
             employerUrl="https://atos.net/en-hu/hungary/atos-consulting"
-            desc="I acted as the deputy to the Technical Team Lead of a team of ~7 developers, working on UWP applications."
+            desc="I was working on various, brown-field backends developed in the .NET ecosystem - mostly via ASP.NET with WCF."
           />
         </div>
       </div>
