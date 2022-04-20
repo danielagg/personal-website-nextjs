@@ -9,26 +9,27 @@ export const Contact = () => {
     useState(false);
 
   const onSubmit = async () => {
-    try {
-      const res = await fetch("/api/sendgrid", {
-        body: JSON.stringify({
-          email,
-          name,
-          message,
-        }),
-        headers: {
-          "Content-Type": "application/json",
-        },
-        method: "POST",
-      });
-
-      const { error } = await res.json();
-      if (error) {
-        console.log(error);
-        return;
+    if (name && email && message) {
+      try {
+        const res = await fetch("/api/sendgrid", {
+          body: JSON.stringify({
+            email,
+            name,
+            message,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+          method: "POST",
+        });
+        const { error } = await res.json();
+        if (error) {
+          console.log(error);
+          return;
+        }
+      } catch (error) {
+        console.error(error);
       }
-    } catch (error) {
-      console.error(error);
     }
   };
 
@@ -146,7 +147,7 @@ const Error = () => {
           d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
         />
       </svg>
-      <div className="">
+      <div>
         Please make sure you have entered your name, email and your message,
         before trying to press &apos;Send&apos; again.
       </div>
