@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Button } from "./button";
-// import axios from "axios";
 
 export const Contact = () => {
   const [name, setName] = useState("");
@@ -28,39 +27,6 @@ export const Contact = () => {
         console.log(error);
         return;
       }
-      // console.log(fullname, email, subject, message);
-
-      //   const response = await axios.post(
-      //     `https://api.sendgrid.com/v3/mail/send`,
-      //     {
-      //       personalizations: [
-      //         {
-      //           to: [
-      //             {
-      //               email: "daniel.agg@outlook.com",
-      //             },
-      //           ],
-      //         },
-      //       ],
-      //       from: {
-      //         email: email,
-      //       },
-      //       subject: "Contact from Personal Site",
-      //       content: [
-      //         {
-      //           type: "text/plain",
-      //           value: `${name}, said: ${message}`,
-      //         },
-      //       ],
-      //     },
-      //     {
-      //       headers: {
-      //         "Content-Type": "application/json",
-      //         Authorization: `Bearer ${process.env.REACT_APP_SENDGRID_API_KEY}`,
-      //       },
-      //     }
-      //   );
-      //   return response.data;
     } catch (error) {
       console.error(error);
     }
@@ -182,7 +148,7 @@ const Error = () => {
       </svg>
       <div className="">
         Please make sure you have entered your name, email and your message,
-        before trying to press 'Send' again.
+        before trying to press &apos;Send&apos; again.
       </div>
     </div>
   );

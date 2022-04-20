@@ -9,7 +9,7 @@ export const About = () => {
     >
       <div className="w-full flex flex-col-reverse lg:flex-row justify-end items-center space-x-0 lg:space-x-16 text-center lg:text-right">
         <div className="w-full lg:w-1/2 text-base lg:text-xl px-4 lg:px-0 mt-12 lg:mt-0 lg:mr-12">
-          I'm Daniel Agg, a Hungarian Full Stack Developer, with more than five
+          I&apos;m Daniel Agg, a Hungarian Full Stack Developer, with more than five
           years of experience in building applications for enterprises.
         </div>
         <Image
@@ -24,7 +24,7 @@ export const About = () => {
       <div className="mt-12 lg:mt-24 px-4 lg:px-0 text-sm lg:text-base text-center lg:text-left flex flex-col lg:flex-row lg:justify-between lg:items-start space-y-12 lg:space-y-0 lg:space-x-32">
         <div className="w-full lg:w-1/2 flex flex-col space-y-8">
           <p>
-            I've started my career as a .NET developer, working almost
+            I&apos;ve started my career as a .NET developer, working almost
             exclusively on ASP.NET Core backends, before deciding to immerse
             myself in the world of modern frontend development, aiming to become
             a competent full-stack engineer.
