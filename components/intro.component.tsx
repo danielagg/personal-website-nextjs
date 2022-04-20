@@ -24,7 +24,7 @@ export const Intro = () => {
           <Button
             variant="filled-gray-hover-green"
             text="Download my CV"
-            // onClick={() => window.open("/DanielAgg_CV.pdf")}
+            onClick={() => window.open("/DanielAgg_CV.pdf")}
           />
           <Button
             variant="outlined"
