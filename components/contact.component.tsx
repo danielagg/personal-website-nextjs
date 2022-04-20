@@ -33,17 +33,32 @@ export const Contact = () => {
     }
   };
 
+  const SubmitButton = () => {
+    return (
+      <Button
+        variant="filled-gray-hover-white"
+        text="Send"
+        onClick={async () => {
+          setUserTriedSubmittingAtLeastOnce(true);
+
+          const res = await onSubmit();
+          console.log(res);
+        }}
+      />
+    );
+  };
+
   return (
     <div
       id="contact"
-      className="bg-green-500 py-32 mt-12 text-white w-full flex justify-center"
+      className="bg-green-500 py-16 lg:py-32 mt-12 text-white w-full flex justify-center"
     >
-      <div className="w-full lg:w-2/3 flex justify-center items-center">
+      <div className="w-full lg:w-2/3 flex justify-center items-center px-10 lg:px-0">
         <div className="w-full">
           <div className="text-5xl font-bold">Get in Touch</div>
 
-          <div className="flex w-full justify-between">
-            <div className="w-2/5 flex flex-col space-y-8 mt-12">
+          <div className="flex flex-col lg:flex-row w-full lg:justify-between">
+            <div className="w-full lg:w-2/5 flex flex-col space-y-8 mt-12">
               <TextInput
                 id="fullname"
                 label="Your name"
@@ -60,20 +75,12 @@ export const Contact = () => {
                 placeHolder="Please, enter your email address here"
               />
 
-              <Button
-                variant="filled-gray-hover-white"
-                text="Send"
-                className="inline-block"
-                onClick={async () => {
-                  setUserTriedSubmittingAtLeastOnce(true);
-
-                  const res = await onSubmit();
-                  console.log(res);
-                }}
-              />
+              <div className="hidden lg:inline-block">
+                <SubmitButton />
+              </div>
             </div>
-            <div className="w-3/5">
-              <div className="mt-12 pl-12">
+            <div className="w-full lg:w-3/5">
+              <div className="mt-8 lg:mt-12 lg:pl-12">
                 <label htmlFor="message" className="block font-bold">
                   Your message
                 </label>
@@ -85,6 +92,10 @@ export const Contact = () => {
                   rows={11}
                 />
               </div>
+            </div>
+
+            <div className="block lg:hidden mt-8">
+              <SubmitButton />
             </div>
           </div>
 
