@@ -16,7 +16,7 @@ const handler = async (request: NextApiRequest, response: NextApiResponse) => {
     return response.status(500).json({ error: "Could not send email" });
   }
 
-  return response.status(200).json({ error: "" });
+  return response.status(200).json({ message: "Email successfully sent." });
 };
 
 export default handler;
