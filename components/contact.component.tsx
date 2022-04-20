@@ -32,6 +32,9 @@ export const Contact = () => {
         }
 
         setIsSubmitSuccess(true);
+        setName("");
+        setEmail("");
+        setMessage("");
         setTimeout(() => {
           setIsSubmitSuccess(false);
         }, 4000);
