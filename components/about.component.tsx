@@ -9,8 +9,8 @@ export const About = () => {
     >
       <div className="w-full flex flex-col-reverse lg:flex-row justify-end items-center space-x-0 lg:space-x-16 text-center lg:text-right">
         <div className="w-full lg:w-1/2 text-base lg:text-xl px-4 lg:px-0 mt-12 lg:mt-0 lg:mr-12">
-          I&apos;m Daniel Agg, a Hungarian Full Stack Developer, with more than five
-          years of experience in building applications for enterprises.
+          I&apos;m Daniel Agg, a Hungarian Full Stack Developer, with more than
+          six years of experience in building applications for enterprises.
         </div>
         <Image
           src="/profile.jpeg"
@@ -36,10 +36,17 @@ export const About = () => {
             ASP.NET Core backend (following Domain Driven Design principals) and
             general infrastructure development on Azure, with Terraform.
           </p>
-          <p>
-            I hold an Azure Developer Associate (AZ-203) certification until the
-            end of this year.
-          </p>
+
+          <div>
+            For more information, please{" "}
+            <span
+              className="cursor-pointer text-green-500 hover:underline"
+              onClick={() => window.open("/DanielAgg_CV.pdf")}
+            >
+              download my CV
+            </span>
+            .
+          </div>
         </div>
         <div className="w-full lg:w-1/2 flex flex-col space-y-10">
           <Experience
@@ -91,7 +98,7 @@ const Experience = ({
             href={employerUrl}
             target="_blank"
             rel="noreferrer"
-            className="text-green-500 font-bold cursor-pointer"
+            className="text-green-500 hover:underline cursor-pointer"
           >
             {" "}
             @ {employerName}

@@ -87,7 +87,7 @@ export const Contact = () => {
           {isSendingEmailInProgress && (
             <svg
               role="status"
-              className="inline mr-2 w-6 h-6 text-gray-200 hover:text-green-600 animate-spin fill-gray-600 hover:fill-green-600"
+              className="inline mr-2 w-6 h-6 text-gray-200 hover:text-green-500 animate-spin fill-gray-600 hover:fill-green-500"
               viewBox="0 0 100 101"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
