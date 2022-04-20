@@ -7,7 +7,7 @@ const handler = async (request: NextApiRequest, response: NextApiResponse) => {
   try {
     const { email, name, message } = request.body;
     await sendgrid.send({
-      to: "daniel.agg@outlook.com",
+      to: "hu.danielagg@gmail.com",
       from: "daniel.agg@outlook.com",
       subject: "Email from Personal Site",
       html: `<div>${email} (${name}) sent the following: ${message}</div>`,
