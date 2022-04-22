@@ -7,7 +7,7 @@ import { Navbar } from "../components/navbar";
 
 const Home: NextPage = () => {
   return (
-    <div className="font-heebo text-gray-700 scroll-smooth">
+    <div className="font-heebo text-gray-700 dark:text-slate-400 scroll-smooth">
       <Head>
         <title>Daniel Agg</title>
         <meta
@@ -27,7 +27,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="w-full relative">
+      <main className="w-full relative dark:bg-slate-900">
         <div className="z-10 flex flex-col items-center justify-center">
           <div className="w-3/4 mt-12 px-4">
             <Navbar />

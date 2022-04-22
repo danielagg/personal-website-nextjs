@@ -18,11 +18,11 @@ export const Button = ({
   const getStyle = () => {
     switch (variant) {
       case "filled-gray-hover-green":
-        return "bg-gray-700 text-white hover:bg-green-500 border-gray-700 hover:border-green-500";
+        return "bg-gray-700 dark:bg-slate-500 text-white dark:text-slate-900 hover:bg-green-500 border-gray-700 dark:border-slate-500 hover:border-green-500";
       case "filled-gray-hover-white":
-        return "bg-gray-700 text-white hover:bg-white border-gray-700 hover:border-white hover:text-green-500";
+        return "bg-gray-700 dark:bg-slate-600 text-white dark:text-slate-900 hover:bg-white hover:dark:bg-slate-500 border-gray-700 dark:border-slate-600 hover:border-white hover:dark:border-slate-500 hover:text-green-500 hover:text-emerald-400";
       case "outlined":
-        return "text-gray-700 hover:text-green-500 border-gray-700 hover:border-green-500";
+        return "text-gray-700 dark:text-slate-500 hover:text-green-500 border-gray-700 dark:border-slate-500 hover:border-green-500";
     }
   };
   return (

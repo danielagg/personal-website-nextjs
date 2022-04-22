@@ -4,13 +4,13 @@ import { Button } from "./button";
 export const Intro = () => {
   return (
     <div className="my-24 lg:my-64 flex items-center justify-center w-full lg:w-3/4 relative">
-      <div className="hidden lg:block z-0 absolute top-0 right-0 w-96 h-96 -mt-32 -mr-32 bg-gray-100 rounded-full" />
+      <div className="hidden lg:block z-0 absolute top-0 right-0 w-96 h-96 -mt-32 -mr-32 bg-gray-100 dark:bg-[#0a101f] rounded-full" />
       <div className="z-10 w-full text-right flex flex-col">
         <div className="font-bold text-4xl lg:text-7xl">Hi, I&apos;m Dan.</div>
         <div className="text-xl lg:text-2xl mt-4">
           I&apos;m a Full Stack Developer, employed by{" "}
           <a href="https://apiumhub.com/" target="_blank" rel="noreferrer">
-            <span className="font-bold text-green-500 cursor-pointer hover:text-green-400">
+            <span className="font-bold text-green-500 dark:text-emerald-500 cursor-pointer hover:text-green-400 dark:hover:text-emerald-400">
               Apiumhub.
             </span>
           </a>

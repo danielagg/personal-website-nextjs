@@ -17,7 +17,7 @@ export const About = () => {
           alt="Picture of Daniel Agg"
           width={156}
           height={156}
-          className="mb-12 lg:mb-0 block rounded-full shadow"
+          className="mb-12 lg:mb-0 block rounded-full shadow dark:opacity-80"
         />
       </div>
 
@@ -40,7 +40,7 @@ export const About = () => {
           <div>
             For more information, please{" "}
             <span
-              className="cursor-pointer text-green-500 hover:underline"
+              className="cursor-pointer text-green-500 dark:text-emerald-500 hover:underline"
               onClick={() => window.open("/DanielAgg_CV.pdf")}
             >
               download my CV
@@ -98,13 +98,13 @@ const Experience = ({
             href={employerUrl}
             target="_blank"
             rel="noreferrer"
-            className="text-green-500 hover:underline cursor-pointer"
+            className="text-green-500 dark:text-emerald-500 hover:underline cursor-pointer"
           >
             {" "}
             @ {employerName}
           </a>
         </div>
-        <div className="mt-2 lg:mt-0 text-xs lg:text-sm opacity-50">
+        <div className="mt-2 lg:mt-0 text-xs lg:text-sm opacity-50 dark:opacity-70">
           {period}
         </div>
       </div>

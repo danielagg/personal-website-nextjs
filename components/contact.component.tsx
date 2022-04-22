@@ -111,7 +111,7 @@ export const Contact = () => {
   return (
     <div
       id="contact"
-      className="bg-green-500 py-16 lg:py-32 mt-12 text-white w-full flex justify-center"
+      className="bg-green-500 dark:bg-[#0a101f] py-16 lg:py-32 mt-12 text-white dark:text-slate-400 w-full flex justify-center"
     >
       <div className="w-full lg:w-2/3 flex justify-center items-center px-10 lg:px-0">
         <div className="w-full">
@@ -141,14 +141,17 @@ export const Contact = () => {
             </div>
             <div className="w-full lg:w-3/5">
               <div className="mt-8 lg:mt-12 lg:pl-12">
-                <label htmlFor="message" className="block font-bold">
+                <label
+                  htmlFor="message"
+                  className="block font-bold dark:text-slate-400"
+                >
                   Your message
                 </label>
                 <textarea
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="Please, enter your message here"
-                  className="appearance-none text-gray-700 p-2 rounded mt-1 w-full resize-none text-sm"
+                  className="appearance-none text-gray-700 dark:text-slate-300 dark:bg-slate-900 p-2 rounded mt-1 w-full resize-none text-sm dark:placeholder:text-slate-600"
                   rows={11}
                 />
               </div>
@@ -197,7 +200,7 @@ const TextInput = ({
 }) => {
   return (
     <div>
-      <label htmlFor="fullname" className="block font-bold">
+      <label htmlFor="fullname" className="block font-bold dark:text-slate-400">
         {label}
       </label>
       <input
@@ -205,7 +208,7 @@ const TextInput = ({
         id={id}
         name={id}
         value={value}
-        className="appearance-none text-gray-700 p-2 rounded mt-1 w-full placeholder:text-sm"
+        className="appearance-none text-gray-700 dark:text-slate-300 dark:bg-slate-900 p-2 rounded mt-1 w-full placeholder:text-sm dark:placeholder:text-slate-600"
         onChange={(e) => setValue(e.target.value)}
         placeholder={placeHolder}
       />
