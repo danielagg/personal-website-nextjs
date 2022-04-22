@@ -18,10 +18,7 @@ const Home: NextPage = () => {
           name="og:description"
           content="Personal site of Daniel Agg, Hungarian full stack developer."
         />
-        <meta
-          property="og:title"
-          content="Add a Shopping Cart to Any Website in Minutes - Snipcart"
-        />
+        <meta property="og:title" content="Daniel Agg | Full Stack Developer" />
         <meta property="og:url" content="https://www.danielagg.com/" />
         <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.ico" />
