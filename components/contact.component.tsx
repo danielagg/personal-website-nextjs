@@ -124,7 +124,7 @@ export const Contact = () => {
                 label="Your name"
                 value={name}
                 setValue={setName}
-                placeHolder="Please, enter your name here"
+                placeHolder="Enter your name here, please"
               />
 
               <TextInput
@@ -132,7 +132,7 @@ export const Contact = () => {
                 label="Your email"
                 value={email}
                 setValue={setEmail}
-                placeHolder="Please, enter your email address here"
+                placeHolder="Enter your email address here, please"
               />
 
               <div className="hidden lg:inline-block">
@@ -150,7 +150,7 @@ export const Contact = () => {
                 <textarea
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  placeholder="Please, enter your message here"
+                  placeholder="Write your message here, please"
                   className="appearance-none text-gray-700 dark:text-slate-300 dark:bg-slate-900 p-2 rounded mt-1 w-full resize-none text-sm dark:placeholder:text-slate-600"
                   rows={11}
                 />
