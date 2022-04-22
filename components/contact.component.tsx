@@ -234,8 +234,8 @@ const ValidationError = () => {
         />
       </svg>
       <div className="w-3/4">
-        Please make sure you have entered your name, email and your message,
-        before trying to press &apos;Send&apos;.
+        Please make sure you have entered your name, email and message, before
+        trying to press &apos;Send&apos;.
       </div>
     </div>
   );
