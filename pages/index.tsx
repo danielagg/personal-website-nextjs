@@ -9,7 +9,7 @@ const Home: NextPage = () => {
   return (
     <div className="font-heebo text-gray-700 dark:text-slate-400 scroll-smooth">
       <Head>
-        <title>Daniel Agg</title>
+        <title>Daniel Agg | Full Stack Developer</title>
         <meta
           name="description"
           content="Personal site of Daniel Agg, Hungarian full stack developer."
