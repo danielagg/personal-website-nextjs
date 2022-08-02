@@ -32,9 +32,6 @@ const Home: NextPage = () => {
           </div>
           <About />
           <Contact />
-
-          <div onClick={() => window.open("/DR02_EN.pdf")}>#1</div>
-          <div onClick={() => window.open("/DR02_SI.pdf")}>#2</div>
         </div>
       </main>
     </div>
