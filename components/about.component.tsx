@@ -98,7 +98,7 @@ const Experience = ({
             href={employerUrl}
             target="_blank"
             rel="noreferrer"
-            className="text-green-500 dark:text-emerald-500 hover:underline cursor-pointer"
+            className="text-green-700 dark:text-emerald-500 hover:text-green-600 cursor-pointer"
           >
             {" "}
             @ {employerName}

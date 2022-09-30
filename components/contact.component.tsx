@@ -78,7 +78,8 @@ export const Contact = () => {
   const SubmitButton = () => {
     return (
       <Button
-        variant="filled-gray-hover-white"
+        variant="filled-gray-hover-green"
+        // variant="filled-gray-hover-white"
         onClick={async () => {
           await onSubmit();
         }}
@@ -111,7 +112,7 @@ export const Contact = () => {
   return (
     <div
       id="contact"
-      className="bg-green-500 dark:bg-[#0a101f] py-16 lg:py-32 mt-12 text-white dark:text-slate-400 w-full flex justify-center"
+      className="bg-slate-100 dark:bg-[#0a101f] py-16 lg:py-32 mt-12 text-gray-700 dark:text-slate-400 w-full flex justify-center"
     >
       <div className="w-full lg:w-2/3 flex justify-center items-center px-10 lg:px-0">
         <div className="w-full">
@@ -151,7 +152,7 @@ export const Contact = () => {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="Write your message here, please"
-                  className="appearance-none text-gray-700 dark:text-slate-300 dark:bg-slate-900 p-2 rounded mt-1 w-full resize-none text-sm dark:placeholder:text-slate-600"
+                  className="appearance-none text-gray-700 dark:text-slate-300 dark:bg-slate-900 p-2 rounded mt-1 w-full resize-none text-sm dark:placeholder:text-slate-600 border border-slate-300 dark:border-none"
                   rows={11}
                 />
               </div>
@@ -208,7 +209,7 @@ const TextInput = ({
         id={id}
         name={id}
         value={value}
-        className="appearance-none text-gray-700 dark:text-slate-300 dark:bg-slate-900 p-2 rounded mt-1 w-full placeholder:text-sm dark:placeholder:text-slate-600"
+        className="appearance-none text-gray-700 dark:text-slate-300 dark:bg-slate-900 p-2 rounded mt-1 w-full placeholder:text-sm dark:placeholder:text-slate-600 border border-slate-300 dark:border-none"
         onChange={(e) => setValue(e.target.value)}
         placeholder={placeHolder}
       />

@@ -10,7 +10,7 @@ export const Intro = () => {
         <div className="text-xl lg:text-2xl mt-4">
           I&apos;m a Full Stack Developer, employed by{" "}
           <a href="https://apiumhub.com/" target="_blank" rel="noreferrer">
-            <span className="font-bold text-green-500 dark:text-emerald-500 cursor-pointer hover:text-green-400 dark:hover:text-emerald-400">
+            <span className="font-bold text-green-700 dark:text-emerald-500 cursor-pointer hover:text-green-600 dark:hover:text-emerald-400">
               Apiumhub.
             </span>
           </a>

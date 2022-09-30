@@ -4,7 +4,7 @@ export const Navbar = () => {
   return (
     <div className="w-full hidden lg:flex flex-row justify-end items-center">
       <ul className="flex space-x-6">
-        <li className="cursor-pointer hover:text-green-500">
+        <li className="cursor-pointer hover:text-green-600">
           <a
             href="https://www.linkedin.com/in/danielagg/"
             target="_blank"
