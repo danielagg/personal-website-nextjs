@@ -16,7 +16,7 @@ export const Intro = () => {
           </a>
         </div>
         <div className="mt-10 text-lg w-full lg:w-4/5 pl-0 lg:pl-24 self-end text-gray-500">
-          I&apos;m a full stack developer, with 6+ years of experience, building
+          I&apos;m a Full Stack Developer, with 6+ years of experience, building
           back-, and frontends with various technologies, designing and
           developing scalable infrastructures on Microsoft Azure.
         </div>
