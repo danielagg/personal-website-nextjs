@@ -1,9 +1,11 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { About } from "../components/about.component";
+import { Blog } from "../components/blog.component";
 import { Contact } from "../components/contact.component";
 import { Intro } from "../components/intro.component";
 import { Navbar } from "../components/navbar";
+import { Projects } from "../components/projects.component";
 
 const Home: NextPage = () => {
   return (
@@ -31,6 +33,10 @@ const Home: NextPage = () => {
             <Intro />
           </div>
           <About />
+          <div className="w-full lg:w-2/3 space-y-16 lg:space-y-0 lg:space-x-32 px-4 py-12 lg:py-24 block lg:flex lg:items-center lg:justify-center border-t-2 border-gray-200 dark:border-slate-700">
+            <Projects />
+            <Blog />
+          </div>
           <Contact />
         </div>
       </main>

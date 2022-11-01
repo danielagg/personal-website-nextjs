@@ -79,7 +79,6 @@ export const Contact = () => {
     return (
       <Button
         variant="filled-gray-hover-green"
-        // variant="filled-gray-hover-white"
         onClick={async () => {
           await onSubmit();
         }}
