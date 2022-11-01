@@ -1,11 +1,11 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { About } from "../components/about.component";
-import { Blog } from "../components/blog.component";
-import { Contact } from "../components/contact.component";
-import { Intro } from "../components/intro.component";
+import { About } from "../components/about";
+import { Blog } from "../components/blog";
+import { Contact } from "../components/contact";
+import { Intro } from "../components/intro";
 import { Navbar } from "../components/navbar";
-import { Projects } from "../components/projects.component";
+import { Projects } from "../components/projects";
 
 const Home: NextPage = () => {
   return (

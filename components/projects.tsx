@@ -3,7 +3,7 @@ export const Projects = () => {
     "cursor-pointer text-green-500 dark:text-emerald-500 hover:underline";
   return (
     <div className="w-full px-6 lg:px-0 text-center lg:text-left">
-      <div className="text-xl font-bold">Projects</div>
+      <div className="text-xl font-bold">Other Projects</div>
 
       <ul className="mt-4 list-disc list-inside space-y-2">
         <li>
