@@ -51,21 +51,21 @@ export const About = () => {
         <div className="w-full lg:w-1/2 flex flex-col space-y-10">
           <Experience
             title="Full Stack Developer"
-            period="2021 - Present"
+            period="Apr 2021 - Present"
             employerName="Apiumhub"
             employerUrl="https://apiumhub.com/"
             desc="I'm currently employed as a full stack developer, working on a React front-, and an ASP.NET Core Web API backend."
           />
           <Experience
             title="Full Stack Developer"
-            period="2018 - 2021"
+            period="Sep 2018 - Apr 2021"
             employerName="Glownexus"
             employerUrl="https://www.glownexus.com/"
             desc="I was employed as a full stack developer, working on a React front-, and an ASP.NET Core Web API backend. I also participated in DevOps duties and general infrastructure development with Azure."
           />
           <Experience
             title=".NET Developer"
-            period="2016 - 2018"
+            period="May 2016 - Sep 2018"
             employerName="Atos Consulting"
             employerUrl="https://atos.net/en-hu/hungary/atos-consulting"
             desc="I was working on various, brown-field backends developed in the .NET ecosystem - mostly via ASP.NET with WCF."
