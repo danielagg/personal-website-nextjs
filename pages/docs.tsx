@@ -8,39 +8,28 @@ const Docs: NextPage = () => {
       <ul className="list-disc list-inside m-24 text-lg space-y-4">
         <li>
           <a
-            onClick={() => window.open("/Application.pdf")}
+            onClick={() => window.open("/Rep_filled.pdf")}
             className={linkStlye}
           >
-            Application form
+            Rep filled
           </a>
         </li>
         <li>
           <a
-            onClick={() => window.open("/Application_filled.pdf")}
+            onClick={() => window.open("/Rep_empty.pdf")}
             className={linkStlye}
           >
-            Application form filled
+            Rep empty
           </a>
         </li>
         <li>
-          <a
-            onClick={() => window.open("/Authorization.pdf")}
-            className={linkStlye}
-          >
-            Authorization
+          <a onClick={() => window.open("/to_bcn.pdf")} className={linkStlye}>
+            TO BCN
           </a>
         </li>
         <li>
-          <a
-            onClick={() => window.open("/Authorization_filled.pdf")}
-            className={linkStlye}
-          >
-            Authorization filled
-          </a>
-        </li>
-        <li>
-          <a onClick={() => window.open("/Passport.jpg")} className={linkStlye}>
-            Passport
+          <a onClick={() => window.open("/to_bud.pdf")} className={linkStlye}>
+            TO BUD
           </a>
         </li>
       </ul>
