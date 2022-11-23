@@ -8,6 +8,14 @@ const Docs: NextPage = () => {
       <ul className="list-disc list-inside m-24 text-lg space-y-4">
         <li>
           <a
+            onClick={() => window.open("/appointment.pdf")}
+            className={linkStlye}
+          >
+            Appointment
+          </a>
+        </li>
+        <li>
+          <a
             onClick={() => window.open("/Rep_filled.pdf")}
             className={linkStlye}
           >
