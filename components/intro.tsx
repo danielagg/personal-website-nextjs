@@ -21,19 +21,6 @@ export const Intro = () => {
           developing scalable infrastructures on Microsoft Azure.
         </div>
 
-        <div>
-          {/* a form here, with two text inputs */}
-          <form
-            onSubmit={(values) => {
-              //
-            }}
-          >
-            <input type="text" />
-            <input type="text" />
-            <button type="submit">Submit</button>
-          </form>
-        </div>
-
         <div className="mt-8 flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:items-center space-x-0 lg:space-x-4 lg:self-end">
           <Button
             variant="filled-gray-hover-green"
