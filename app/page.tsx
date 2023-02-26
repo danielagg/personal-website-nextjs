@@ -14,7 +14,7 @@ const Index = () => {
           <Intro />
         </div>
         <About />
-        <div className="w-full lg:w-2/3 space-y-16 lg:space-y-0 lg:space-x-32 px-4 py-12 lg:py-24 block lg:flex lg:items-center lg:justify-center border-t-2 border-gray-200 dark:border-slate-700">
+        <div className="w-full lg:w-2/3 space-y-16 lg:space-y-0 lg:space-x-32 px-4 py-12 lg:py-24 block lg:flex lg:items-start lg:justify-center border-t-2 border-gray-200 dark:border-slate-700">
           <Projects />
           <LatestBlogPosts />
         </div>

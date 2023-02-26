@@ -1,44 +1,55 @@
-export const LatestBlogPosts = () => {
-  const linkClass =
-    "cursor-pointer text-green-500 dark:text-emerald-500 hover:underline";
+import Link from "next/link";
+import React from "react";
 
-  // https://dolphin-app-89fo4.ondigitalocean.app/api/posts?sort=id:desc&pagination[page]=1&pagination[pageSize]=3
+const getData = async () => {
+  const res = await fetch(
+    "https://dolphin-app-89fo4.ondigitalocean.app/api/posts?fields[0]=title&fields[1]=publishedAt&sort=id:desc&pagination[page]=1&pagination[pageSize]=3"
+  );
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch the latest 3 posts");
+  }
+
+  return res.json();
+};
+
+export const LatestBlogPosts = async () => {
+  const linkClass =
+    "cursor-pointer text-green-500 dark:text-emerald-500 hover:underline flex items-center space-x-2";
+
+  const {
+    data,
+  }: {
+    data: { id: number; attributes: { title: string; publishedAt: string } }[];
+  } = await getData();
 
   return (
     <div className="w-full px-6 lg:px-0 text-center lg:text-left">
       <div className="text-xl font-bold">Latest Blog Posts</div>
 
-      <ul className="mt-4 list-disc list-inside space-y-2">
-        <li>
-          <a
-            href="https://apiumhub.com/tech-blog-barcelona/azure-elastic-jobs-for-sql-databases/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={linkClass}
-          >
-            Azure Elastic Jobs For SQL Databases
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://apiumhub.com/tech-blog-barcelona/comparing-iac-tools-for-azure-terraform-and-bicep/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={linkClass}
-          >
-            Comparing IaC Tools For Azure: Terraform And Bicep
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://apiumhub.com/tech-blog-barcelona/build-a-bot-with-the-new-bot-framework-composer/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={linkClass}
-          >
-            Build A Bot With The New Bot Framework Composer
-          </a>
-        </li>
+      <ul className="mt-4 list-inside space-y-4">
+        {data.map((d) => {
+          return (
+            <li key={d.id}>
+              <Link href={`/blog/posts/${d.id}`}>
+                <div>
+                  <div className={linkClass}>
+                    <div className="h-1 w-1 rounded-full bg-green-500 dark:bg-emerald-500" />{" "}
+                    <div>{d.attributes.title}</div>
+                  </div>
+                  <div className="text-xs pl-3">
+                    Published on{" "}
+                    {new Intl.DateTimeFormat("en-US", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    }).format(new Date(d.attributes.publishedAt))}
+                  </div>
+                </div>
+              </Link>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
