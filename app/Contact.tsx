@@ -1,5 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { Button } from "./button";
+"use client";
+
+// POST http://localhost:3000/contact?name=John&email=john@test.com&message=Hellllo
+
+import { useEffect, useState } from "react";
+import { Button } from "./components/Button";
+import { TextInput } from "./components/TextInput";
+import { Success } from "./contact/Success";
+import { ValidationError } from "./contact/ValidationError";
+import { SubmitError } from "./contact/SubmitError";
 
 export const Contact = () => {
   const [name, setName] = useState("");
@@ -38,17 +46,16 @@ export const Contact = () => {
 
     try {
       setIsSendingEmailInProgress(true);
-      const res = await fetch("/api/sendgrid", {
-        body: JSON.stringify({
-          email,
-          name,
-          message,
-        }),
-        headers: {
-          "Content-Type": "application/json",
-        },
-        method: "POST",
-      });
+      const res = await fetch(
+        `/contact?name=${name}&email=${email}&message=${message}`,
+        {
+          body: JSON.stringify({}),
+          headers: {
+            "Content-Type": "application/json",
+          },
+          method: "POST",
+        }
+      );
       const { error } = await res.json();
 
       if (error) {
@@ -180,110 +187,6 @@ export const Contact = () => {
             </div>
           )}
         </div>
-      </div>
-    </div>
-  );
-};
-
-const TextInput = ({
-  id,
-  label,
-  value,
-  setValue,
-  placeHolder,
-}: {
-  id: string;
-  label: string;
-  value: string;
-  setValue: (newValue: string) => void;
-  placeHolder: string;
-}) => {
-  return (
-    <div>
-      <label htmlFor="fullname" className="block font-bold dark:text-slate-400">
-        {label}
-      </label>
-      <input
-        type="text"
-        id={id}
-        name={id}
-        value={value}
-        className="appearance-none text-gray-700 dark:text-slate-300 dark:bg-slate-900 p-2 rounded mt-1 w-full placeholder:text-sm dark:placeholder:text-slate-600 border border-slate-300 dark:border-none"
-        onChange={(e) => setValue(e.target.value)}
-        placeholder={placeHolder}
-      />
-    </div>
-  );
-};
-
-const ValidationError = () => {
-  return (
-    <div className="flex items-start lg:items-center space-x-2 text-sm">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-8 w-8"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth={2}
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
-        />
-      </svg>
-      <div className="w-3/4">
-        Please make sure you have entered your name, email and message, before
-        trying to press &apos;Send&apos;.
-      </div>
-    </div>
-  );
-};
-
-const Success = () => {
-  return (
-    <div className="flex items-start lg:items-center space-x-2 text-sm">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-8 w-8"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth={2}
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-        />
-      </svg>
-      <div className="w-3/4">
-        Thank you! Your message was successfully sent to me.
-      </div>
-    </div>
-  );
-};
-
-const SubmitError = () => {
-  return (
-    <div className="flex items-start lg:items-center space-x-2 text-sm">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-8 w-8"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth={2}
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
-        />
-      </svg>
-      <div className="w-3/4">
-        Sorry, your message could not be sent. Please try again later.
       </div>
     </div>
   );

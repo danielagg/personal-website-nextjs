@@ -1,5 +1,6 @@
-import React from "react";
-import { Button } from "./button";
+"use client";
+
+import { Button } from "./components/Button";
 
 export const Intro = () => {
   return (
@@ -24,8 +25,13 @@ export const Intro = () => {
         <div className="mt-8 flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:items-center space-x-0 lg:space-x-4 lg:self-end">
           <Button
             variant="filled-gray-hover-green"
-            text="Download my CV"
-            onClick={() => window.open("/DanielAgg_CV.pdf")}
+            text="Portfolio"
+            onClick={() => {
+              const anchorEl = document.getElementById("projects");
+              if (anchorEl) {
+                anchorEl.scrollIntoView();
+              }
+            }}
           />
           <Button
             variant="outlined"
@@ -37,6 +43,23 @@ export const Intro = () => {
               }
             }}
           />
+        </div>
+        <div className="mt-4">
+          ...or download{" "}
+          <span
+            onClick={() => window.open("/DanielAgg_CV.pdf")}
+            className="text-green-700 dark:text-emerald-500 cursor-pointer hover:text-green-600 dark:hover:text-emerald-400"
+          >
+            my CV
+          </span>
+          , or view{" "}
+          <span
+            onClick={() => window.open("/blog", "_self")}
+            className="text-green-700 dark:text-emerald-500 cursor-pointer hover:text-green-600 dark:hover:text-emerald-400"
+          >
+            my blog
+          </span>
+          .
         </div>
       </div>
     </div>

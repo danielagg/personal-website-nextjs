@@ -1,5 +1,3 @@
-import React from "react";
-
 export const Navbar = () => {
   return (
     <div className="w-full hidden lg:flex flex-row justify-end items-center">

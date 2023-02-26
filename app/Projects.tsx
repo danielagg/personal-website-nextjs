@@ -1,40 +1,39 @@
-export const Blog = () => {
+export const Projects = () => {
   const linkClass =
     "cursor-pointer text-green-500 dark:text-emerald-500 hover:underline";
-
   return (
-    <div className="w-full px-6 lg:px-0 text-center lg:text-left">
-      <div className="text-xl font-bold">Blog Posts</div>
+    <div className="w-full px-6 lg:px-0 text-center lg:text-left" id="projects">
+      <div className="text-xl font-bold">Projects</div>
 
       <ul className="mt-4 list-disc list-inside space-y-2">
         <li>
           <a
-            href="https://apiumhub.com/tech-blog-barcelona/azure-elastic-jobs-for-sql-databases/"
+            href="http://flashcards.danielagg.com/"
             target="_blank"
             rel="noopener noreferrer"
             className={linkClass}
           >
-            Azure Elastic Jobs For SQL Databases
+            Flashcard Language Learning Memory Game
           </a>
         </li>
         <li>
           <a
-            href="https://apiumhub.com/tech-blog-barcelona/comparing-iac-tools-for-azure-terraform-and-bicep/"
+            href="https://payment-tracker.danielagg.com/"
             target="_blank"
             rel="noopener noreferrer"
             className={linkClass}
           >
-            Comparing IaC Tools For Azure: Terraform And Bicep
+            Payment Tracker
           </a>
         </li>
         <li>
           <a
-            href="https://apiumhub.com/tech-blog-barcelona/build-a-bot-with-the-new-bot-framework-composer/"
+            href="http://wheel-spinner.danielagg.com/"
             target="_blank"
             rel="noopener noreferrer"
             className={linkClass}
           >
-            Build A Bot With The New Bot Framework Composer
+            Wheel spinner
           </a>
         </li>
       </ul>
