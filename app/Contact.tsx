@@ -124,7 +124,7 @@ export const Contact = () => {
 
           <div className="flex flex-col lg:flex-row w-full lg:justify-between">
             <div className="w-full lg:w-2/5 flex flex-col space-y-8 mt-12">
-              <TextInput
+              {/* <TextInput
                 id="fullname"
                 label="Your name"
                 value={name}
@@ -138,7 +138,7 @@ export const Contact = () => {
                 value={email}
                 setValue={setEmail}
                 placeHolder="Enter your email address here, please"
-              />
+              /> */}
 
               <div className="hidden lg:inline-block">
                 <SubmitButton />

@@ -1,3 +1,5 @@
+"use client";
+
 export const ValidationError = () => {
   return (
     <div className="flex items-start lg:items-center space-x-2 text-sm">

@@ -14,7 +14,7 @@ export const TextInput = ({
   placeHolder: string;
 }) => {
   return (
-    <div>
+    <form>
       <label htmlFor="fullname" className="block font-bold dark:text-slate-400">
         {label}
       </label>
@@ -27,6 +27,6 @@ export const TextInput = ({
         onChange={(e) => setValue(e.target.value)}
         placeholder={placeHolder}
       />
-    </div>
+    </form>
   );
 };
