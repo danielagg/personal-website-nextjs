@@ -1,7 +1,5 @@
 "use client";
 
-// POST http://localhost:3000/contact?name=John&email=john@test.com&message=Hellllo
-
 import { useEffect, useState } from "react";
 import { Button } from "./components/Button";
 import { TextInput } from "./components/TextInput";
