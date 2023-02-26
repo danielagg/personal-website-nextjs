@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 
 const getData = async () => {
   const res = await fetch(
@@ -14,8 +13,9 @@ const getData = async () => {
 };
 
 export const LatestBlogPosts = async () => {
-  const linkClass =
-    "cursor-pointer text-green-500 dark:text-emerald-500 hover:underline flex items-center space-x-2";
+  const baseLinkClass =
+    "cursor-pointer text-green-500 dark:text-emerald-500 hover:underline";
+  const linkClass = `${baseLinkClass} flex items-center space-x-2`;
 
   const {
     data,
@@ -34,7 +34,8 @@ export const LatestBlogPosts = async () => {
               <Link href={`/blog/posts/${d.id}`}>
                 <div>
                   <div className={linkClass}>
-                    <div className="h-1 w-1 rounded-full bg-green-500 dark:bg-emerald-500" />{" "}
+                    <div className="h-1 w-1 rounded-full bg-green-500 dark:bg-emerald-500 hidden lg:block" />
+                    <span className="block lg:hidden"> </span>
                     <div>{d.attributes.title}</div>
                   </div>
                   <div className="text-xs pl-3">
@@ -51,6 +52,28 @@ export const LatestBlogPosts = async () => {
           );
         })}
       </ul>
+
+      <div className="mt-8 border-t border-slate-700 p-2 flex justify-center lg:justify-start">
+        <Link href="/blog">
+          <div className="text-sm mt-4 flex items-center space-x-1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+              />
+            </svg>
+            <div className={baseLinkClass}>View all posts</div>
+          </div>
+        </Link>
+      </div>
     </div>
   );
 };

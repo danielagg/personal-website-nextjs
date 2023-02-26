@@ -45,19 +45,19 @@ export const Intro = () => {
           />
         </div>
         <div className="mt-4">
-          ...or download{" "}
+          ...or{" "}
           <span
             onClick={() => window.open("/DanielAgg_CV.pdf")}
             className="text-green-700 dark:text-emerald-500 cursor-pointer hover:text-green-600 dark:hover:text-emerald-400"
           >
-            my CV
+            download my CV
           </span>
-          , or view{" "}
+          , or{" "}
           <span
             onClick={() => window.open("/blog", "_self")}
             className="text-green-700 dark:text-emerald-500 cursor-pointer hover:text-green-600 dark:hover:text-emerald-400"
           >
-            my blog
+            view my blog
           </span>
           .
         </div>
