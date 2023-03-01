@@ -3,7 +3,7 @@ import { Navbar } from "../components/Navbar";
 
 export const Header = () => {
   return (
-    <div className="flex items-center justify-between">
+    <div className="w-full flex items-center justify-between">
       <div className="w-full">
         <Link href="/">
           <div className="text-xs flex items-center space-x-2 text-green-700 dark:text-emerald-500 cursor-pointer hover:text-green-600 dark:hover:text-emerald-400">
@@ -24,7 +24,7 @@ export const Header = () => {
             <div>Back to the main page</div>
           </div>
         </Link>
-        <div className="">
+        <div>
           I&apos;m an expert on nothing. This blog captures my journey as I
           learn and build things.
         </div>

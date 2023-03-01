@@ -33,9 +33,9 @@ const Index = async () => {
   return (
     <main className="w-full dark:bg-slate-900">
       <div className="flex flex-col items-center justify-center">
-        <div className="w-3/4 mt-12 mb-40">
+        <div className="w-full px-8 lg:px-0 lg:w-3/4 mt-12 mb-24 lg:mb-40">
           <Header />
-          <div className="w-full flex flex-col items-start space-y-24 mt-12 border-t border-slate-700 pt-40 justify-center">
+          <div className="w-full flex flex-col items-start space-y-24 mt-12 border-t border-slate-700 pt-24 lg:pt-40 justify-center">
             {data.map((d) => {
               return (
                 <BlogPostListEntry
