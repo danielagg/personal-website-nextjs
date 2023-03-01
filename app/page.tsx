@@ -2,7 +2,7 @@ import { About } from "./About";
 import { Contact } from "./Contact";
 import { Intro } from "./Intro";
 import { LatestBlogPosts } from "./LatestBlogPosts";
-import { Navbar } from "./Navbar";
+import { Navbar } from "./components/Navbar";
 import { Projects } from "./Projects";
 
 const Index = () => {

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FormattedDate } from "./utilities/DateFormattes";
 
 const getData = async () => {
   const res = await fetch(
@@ -40,11 +41,7 @@ export const LatestBlogPosts = async () => {
                   </div>
                   <div className="text-xs pl-3">
                     Published on{" "}
-                    {new Intl.DateTimeFormat("en-US", {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    }).format(new Date(d.attributes.publishedAt))}
+                    <FormattedDate dateAsString={d.attributes.publishedAt} />.
                   </div>
                 </div>
               </Link>
