@@ -3,7 +3,7 @@ import { FormattedDate } from "./utilities/DateFormattes";
 
 const getData = async () => {
   const res = await fetch(
-    "https://dolphin-app-89fo4.ondigitalocean.app/api/posts?fields[0]=title&fields[1]=publishedAt&sort=id:desc&pagination[page]=1&pagination[pageSize]=3"
+    "https://dolphin-app-89fo4.ondigitalocean.app/api/posts?fields[0]=title&fields[1]=publishedAt&fields[2]=originally_published_on&sort=id:desc&pagination[page]=1&pagination[pageSize]=3"
   );
 
   if (!res.ok) {
@@ -21,7 +21,14 @@ export const LatestBlogPosts = async () => {
   const {
     data,
   }: {
-    data: { id: number; attributes: { title: string; publishedAt: string } }[];
+    data: {
+      id: number;
+      attributes: {
+        title: string;
+        publishedAt: string;
+        originally_published_on?: string;
+      };
+    }[];
   } = await getData();
 
   return (
@@ -41,7 +48,13 @@ export const LatestBlogPosts = async () => {
                   </div>
                   <div className="text-xs pl-3">
                     Published on{" "}
-                    <FormattedDate dateAsString={d.attributes.publishedAt} />.
+                    <FormattedDate
+                      dateAsString={
+                        d.attributes.originally_published_on ??
+                        d.attributes.publishedAt
+                      }
+                    />
+                    .
                   </div>
                 </div>
               </Link>
