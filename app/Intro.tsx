@@ -54,7 +54,7 @@ export const Intro = () => {
           </span>
           , or{" "}
           <span
-            onClick={() => window.open("/blog", "_self")}
+            onClick={() => window.open("https://blog.danielagg.com/", "_self")}
             className="text-green-700 dark:text-emerald-500 cursor-pointer hover:text-green-600 dark:hover:text-emerald-400"
           >
             view my blog
