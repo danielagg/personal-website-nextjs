@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Button } from "./components/Button";
+import { Card } from "./components/Card";
 
 export const About = () => {
   return (
@@ -81,23 +82,25 @@ const Experience = ({
   desc: string;
 }) => {
   return (
-    <div className="rounded bg-accent-light dark:bg-accent-dark p-5">
-      <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between">
-        <div className="flex flex-col lg:flex-row items-start lg:items-center lg:space-x-2">
-          <div className="text-xl font-bold">{title}</div>
-          <div className="hidden lg:block">@</div>
-          <a
-            href={employerUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="text-primary-light dark:text-primary-dark hover:underline cursor-pointer"
-          >
-            {employerName}
-          </a>
+    <Card>
+      <>
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between">
+          <div className="flex flex-col lg:flex-row items-start lg:items-center lg:space-x-2">
+            <div className="text-xl font-bold">{title}</div>
+            <div className="hidden lg:block">@</div>
+            <a
+              href={employerUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="text-primary-light dark:text-primary-dark hover:underline cursor-pointer"
+            >
+              {employerName}
+            </a>
+          </div>
+          <div className="text-sm opacity-50 dark:opacity-70">{period}</div>
         </div>
-        <div className="text-sm opacity-50 dark:opacity-70">{period}</div>
-      </div>
-      <div className="pt-4 text-sm">{desc}</div>
-    </div>
+        <div className="pt-4 text-sm">{desc}</div>
+      </>
+    </Card>
   );
 };
