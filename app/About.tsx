@@ -24,16 +24,17 @@ export const About = () => {
         <div className="flex flex-col space-y-8">
           <p>
             I&apos;ve started my career as a .NET developer, working almost
-            exclusively on ASP.NET and ASP.NET Core backends, before deciding to
-            immerse myself in the world of modern frontend development, aiming
-            to become a competent full-stack engineer.
+            exclusively on ASP.NET Core backends, before immersing myself in
+            frontend development, aiming to become a competent full-stack
+            engineer.
           </p>
 
           <p>
-            As of today, on my day-to-day work I switch between developing a
-            React frontend (using Typescript, TailwindCSS and react-query), an
-            ASP.NET Core backend (following Domain Driven Design principals) and
-            general infrastructure development on Azure, with Terraform.
+            Currently, my day-to-day work revolves around switching between
+            developing a React frontend (Typescript, TailwindCSS and
+            react-query), an ASP.NET Core backend (following Domain Driven
+            Design principals) and general infrastructure development on Azure,
+            with Terraform.
           </p>
         </div>
         <div className="mt-12 flex flex-col space-y-8 lg:space-y-4">

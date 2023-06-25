@@ -23,9 +23,12 @@ export const Intro = () => {
           </a>
         </div>
         <div className="mt-10 text-gray-light dark:text-gray-dark w-full lg:w-3/4 leading-7 tracking-wide">
-          Hi! I&apos;m Daniel Agg, a Full Stack Developer, with 7+ years of
-          experience, building back-, and frontends with various technologies,
-          designing and developing scalable infrastructures on Microsoft Azure.
+          Hi there! I&apos;m Daniel Agg, a Full Stack Developer with over 7
+          years of experience. I have a strong skill set in building both back-,
+          and frontend solutions using various technologies (.NET, Go,
+          TypeScript/JavaScript with React/Svelte/Solid). I have expertise in
+          designing and developing scalable architectures, mostly on
+          Microsoft&apos;s Azure platform.
         </div>
 
         <div className="flex flex-col lg:flex-row items-start lg:items-center space-y-4 lg:space-y-0 lg:space-x-4 mt-12">
