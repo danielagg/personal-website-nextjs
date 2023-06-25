@@ -1,18 +1,15 @@
 "use client";
 
 import Image from "next/image";
+import { Button } from "./components/Button";
 
 export const About = () => {
   return (
     <div
       id="about"
-      className="w-full lg:w-2/3 my-12 lg:my-32 px-4 leading-loose"
+      className="w-full mt-12 text-gray-light dark:text-gray-dark"
     >
-      <div className="w-full flex flex-col-reverse lg:flex-row justify-end items-center space-x-0 lg:space-x-16 text-center lg:text-right">
-        <div className="w-full lg:w-1/2 text-base lg:text-xl px-4 lg:px-0 mt-12 lg:mt-0 lg:mr-12">
-          I&apos;m Daniel Agg, a Hungarian Full Stack Developer, with more than
-          six years of experience in building applications for enterprises.
-        </div>
+      <div className="w-full flex justify-center items-center">
         <Image
           src="/profile.jpeg"
           alt="Picture of Daniel Agg"
@@ -22,8 +19,8 @@ export const About = () => {
         />
       </div>
 
-      <div className="mt-12 lg:mt-24 px-4 lg:px-0 text-sm lg:text-base text-center lg:text-left flex flex-col lg:flex-row lg:justify-between lg:items-start space-y-12 lg:space-y-0 lg:space-x-32">
-        <div className="w-full lg:w-1/2 flex flex-col space-y-8">
+      <div className="mt-6 lg:mt-16">
+        <div className="flex flex-col space-y-8">
           <p>
             I&apos;ve started my career as a .NET developer, working almost
             exclusively on ASP.NET and ASP.NET Core backends, before deciding to
@@ -37,40 +34,30 @@ export const About = () => {
             ASP.NET Core backend (following Domain Driven Design principals) and
             general infrastructure development on Azure, with Terraform.
           </p>
-
-          <div>
-            For more information, please{" "}
-            <span
-              className="cursor-pointer text-green-500 dark:text-emerald-500 hover:underline"
-              onClick={() => window.open("/DanielAgg_CV.pdf")}
-            >
-              download my CV
-            </span>
-            .
-          </div>
         </div>
-        <div className="w-full lg:w-1/2 flex flex-col space-y-10">
+        <div className="mt-12 flex flex-col space-y-8 lg:space-y-2">
           <Experience
             title="Full Stack Developer"
             period="Apr 2021 - Present"
             employerName="Apiumhub"
             employerUrl="https://apiumhub.com/"
-            desc="I'm currently employed as a full stack developer, working on a React front-, and an ASP.NET Core Web API backend."
           />
           <Experience
             title="Full Stack Developer"
             period="Sep 2018 - Apr 2021"
             employerName="Glownexus"
             employerUrl="https://www.glownexus.com/"
-            desc="I was employed as a full stack developer, working on a React front-, and an ASP.NET Core Web API backend. I also participated in DevOps duties and general infrastructure development with Azure."
           />
           <Experience
             title=".NET Developer"
             period="May 2016 - Sep 2018"
             employerName="Atos Consulting"
             employerUrl="https://atos.net/en-hu/hungary/atos-consulting"
-            desc="I was working on various, brown-field backends developed in the .NET ecosystem - mostly via ASP.NET with WCF."
           />
+        </div>
+
+        <div className="mt-12 inline-block">
+          <Button onClick={() => {}}>Download CV</Button>
         </div>
       </div>
     </div>
@@ -80,20 +67,18 @@ export const About = () => {
 const Experience = ({
   title,
   period,
-  desc,
   employerName,
   employerUrl,
 }: {
   title: string;
   period: string;
-  desc?: string;
   employerName: string;
   employerUrl: string;
 }) => {
   return (
     <div>
-      <div className="flex flex-col lg:flex-row justify-between items-center">
-        <div className="flex flex-col lg:flex-row items-center lg:space-x-2">
+      <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between">
+        <div className="">
           <span className="text-xl font-bold">{title}</span>
           <a
             href={employerUrl}
@@ -105,11 +90,8 @@ const Experience = ({
             @ {employerName}
           </a>
         </div>
-        <div className="mt-2 lg:mt-0 text-xs lg:text-sm opacity-50 dark:opacity-70">
-          {period}
-        </div>
+        <div className="text-sm opacity-50 dark:opacity-70">{period}</div>
       </div>
-      <div className="mt-4 lg:mt-2">{desc}</div>
     </div>
   );
 };
