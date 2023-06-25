@@ -21,7 +21,7 @@ module.exports = {
       },
       gray: {
         dark: "#64748B",
-        light: "#64748B",
+        light: "#71717a",
       },
       button: {
         dark: "#1e293b",
