@@ -35,24 +35,27 @@ export const About = () => {
             general infrastructure development on Azure, with Terraform.
           </p>
         </div>
-        <div className="mt-12 flex flex-col space-y-8 lg:space-y-2">
+        <div className="mt-12 flex flex-col space-y-8 lg:space-y-4">
           <Experience
             title="Full Stack Developer"
             period="Apr 2021 - Present"
             employerName="Apiumhub"
             employerUrl="https://apiumhub.com/"
+            desc="I'm currently employed as a full stack developer, working on a React front-, and an ASP.NET Core Web API backend."
           />
           <Experience
             title="Full Stack Developer"
             period="Sep 2018 - Apr 2021"
             employerName="Glownexus"
             employerUrl="https://www.glownexus.com/"
+            desc="I was employed as a full stack developer, working on a React front-, and an ASP.NET Core Web API backend. I also participated in DevOps duties and general infrastructure development with Azure."
           />
           <Experience
             title=".NET Developer"
             period="May 2016 - Sep 2018"
             employerName="Atos Consulting"
             employerUrl="https://atos.net/en-hu/hungary/atos-consulting"
+            desc="I was working on various, brown-field backends developed in the .NET ecosystem - mostly via ASP.NET with WCF."
           />
         </div>
 
@@ -69,29 +72,32 @@ const Experience = ({
   period,
   employerName,
   employerUrl,
+  desc,
 }: {
   title: string;
   period: string;
   employerName: string;
   employerUrl: string;
+  desc: string;
 }) => {
   return (
-    <div>
+    <div className="rounded bg-accent-light dark:bg-accent-dark p-5">
       <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between">
-        <div className="">
-          <span className="text-xl font-bold">{title}</span>
+        <div className="flex flex-col lg:flex-row items-start lg:items-center lg:space-x-2">
+          <div className="text-xl font-bold">{title}</div>
+          <div className="hidden lg:block">@</div>
           <a
             href={employerUrl}
             target="_blank"
             rel="noreferrer"
-            className="text-green-700 dark:text-emerald-500 hover:text-green-600 cursor-pointer"
+            className="text-primary-light dark:text-primary-dark hover:underline cursor-pointer"
           >
-            {" "}
-            @ {employerName}
+            {employerName}
           </a>
         </div>
         <div className="text-sm opacity-50 dark:opacity-70">{period}</div>
       </div>
+      <div className="pt-4 text-sm">{desc}</div>
     </div>
   );
 };

@@ -9,7 +9,7 @@ import { Intro } from "./Intro";
 
 const Index = () => {
   return (
-    <main className="w-full relative bg-background-light dark:bg-background-dark text-primary-light dark:text-primary-dark">
+    <main className="w-full relative  text-primary-light dark:text-primary-dark">
       <div className="z-10 flex flex-col items-center justify-center">
         <div className="w-3/4 lg:w-1/2 px-4">
           <Intro />

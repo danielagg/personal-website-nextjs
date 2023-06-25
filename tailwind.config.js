@@ -9,11 +9,15 @@ module.exports = {
     colors: {
       background: {
         dark: "#020617",
-        light: "#cbd5e1",
+        light: "#f1f5f9",
       },
       primary: {
         dark: "#38BDF8",
-        light: "#1e40af",
+        light: "#1d4ed8",
+      },
+      accent: {
+        dark: "#03081f",
+        light: "#e9edf2",
       },
       gray: {
         dark: "#64748B",
@@ -21,9 +25,9 @@ module.exports = {
       },
       button: {
         dark: "#1e293b",
-        light: "#94a3b8",
+        light: "#1e293b",
         "dark-hover": "#334155",
-        "light-hover": "#64748b",
+        "light-hover": "#1d4ed8",
       },
     },
     extend: {
