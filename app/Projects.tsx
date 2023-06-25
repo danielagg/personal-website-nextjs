@@ -7,7 +7,9 @@ import { GitHub } from "./components/Github";
 export const Projects = () => {
   return (
     <div className="mt-40">
-      <div className="text-3xl font-bold">Projects</div>
+      <div className="text-3xl font-bold text-primary-light dark:text-primary-dark text-center">
+        Projects
+      </div>
 
       <ul className="mt-8 space-y-8 lg:space-y-4">
         <Project
@@ -27,7 +29,7 @@ export const Projects = () => {
         <Project
           key="payment-tracker"
           title="Payment Tracker App"
-          link="http://fpayment-tracker.danielagg.com/"
+          link="http://payment-tracker.danielagg.com/"
           desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus velit unde aliquam impedit, quam earum reprehenderit consectetur, officia repellat odit esse veniam similique, deserunt cumque necessitatibus consequatur facilis placeat? Ut tenetur qui dolore perferendis, quia odio! Fuga voluptatem quos dignissimos."
         />
       </ul>
@@ -53,7 +55,7 @@ const Project = ({
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl font-bold"
+              className="text-xl font-bold hover:underline decoration-wavy underline-offset-8 text-primary-light dark:text-primary-dark"
             >
               {title}
             </a>
@@ -64,7 +66,7 @@ const Project = ({
           </div>
 
           <div className="pt-4">
-            <a className="text-sm cursor-pointer hover:underline decoration-wavy underline-offset-8">
+            <a className="text-sm cursor-pointer hover:underline decoration-wavy underline-offset-8 text-primary-light dark:text-primary-dark">
               View source @ GitHub
             </a>
           </div>

@@ -1,26 +1,18 @@
-// import { About } from "./About";
-// import { Contact } from "./Contact";
 import { About } from "./About";
 import { Intro } from "./Intro";
 import { Projects } from "./Projects";
-// import { Navbar } from "./components/Navbar";
-// import { Projects } from "./Projects";
-// import { Button } from "./components/Button";
-// import { OtherProjects } from "./OtherProjects";
+import { Contact } from "./Contact";
 
 const Index = () => {
   return (
-    <main className="w-full relative  text-primary-light dark:text-primary-dark">
+    <main className="w-full relative text-gray-light dark:text-gray-dark">
       <div className="z-10 flex flex-col items-center justify-center">
         <div className="w-3/4 lg:w-1/2 px-4">
           <Intro />
           <About />
           <Projects />
+          <Contact />
         </div>
-        {/* <div className="w-full lg:w-2/3 space-y-16 lg:space-y-0 lg:space-x-32 px-4 py-12 lg:py-24 block lg:flex lg:items-start lg:justify-center border-t-2 border-gray-200 dark:border-slate-700"> */}
-        {/* <OtherProjects /> */}
-        {/* </div> */}
-        {/* <Contact /> */}
       </div>
     </main>
   );

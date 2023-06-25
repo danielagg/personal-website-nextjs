@@ -83,7 +83,6 @@ export const Contact = () => {
   const SubmitButton = () => {
     return (
       <Button
-        variant="filled-gray-hover-green"
         onClick={async () => {
           await onSubmit();
         }}
@@ -114,13 +113,12 @@ export const Contact = () => {
   };
 
   return (
-    <div
-      id="contact"
-      className="bg-slate-100 dark:bg-[#0a101f] py-16 lg:py-32 mt-12 text-gray-700 dark:text-slate-400 w-full flex justify-center"
-    >
-      <div className="w-full lg:w-2/3 flex justify-center items-center px-10 lg:px-0">
+    <div id="contact" className="w-full my-40 flex justify-center">
+      <div className="w-full flex justify-center items-center">
         <div className="w-full">
-          <div className="text-5xl font-bold">Get in Touch</div>
+          <div className="text-3xl font-bold text-primary-light dark:text-primary-dark text-center">
+            Get in Touch
+          </div>
 
           <div className="flex flex-col lg:flex-row w-full lg:justify-between">
             <div className="w-full lg:w-2/5 flex flex-col space-y-8 mt-12">
@@ -129,7 +127,7 @@ export const Contact = () => {
                 label="Your name"
                 value={name}
                 setValue={setName}
-                placeHolder="Enter your name here, please"
+                placeHolder="Enter your name here"
               />
 
               <TextInput
@@ -137,7 +135,7 @@ export const Contact = () => {
                 label="Your email"
                 value={email}
                 setValue={setEmail}
-                placeHolder="Enter your email address here, please"
+                placeHolder="Enter your email address here"
               />
 
               <div className="hidden lg:inline-block">
@@ -155,7 +153,7 @@ export const Contact = () => {
                 <textarea
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  placeholder="Write your message here, please"
+                  placeholder="Write your message here"
                   className="appearance-none text-gray-700 dark:text-slate-300 dark:bg-slate-900 p-2 rounded mt-1 w-full resize-none text-sm dark:placeholder:text-slate-600 border border-slate-300 dark:border-none"
                   rows={11}
                 />

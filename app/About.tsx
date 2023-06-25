@@ -60,8 +60,10 @@ export const About = () => {
           />
         </div>
 
-        <div className="mt-12 inline-block">
-          <Button onClick={() => {}}>Download CV</Button>
+        <div className="mt-12 inline-flex justify-center items-center w-full">
+          <Button onClick={() => window.open("/DanielAgg_CV.pdf")}>
+            Download CV
+          </Button>
         </div>
       </div>
     </div>
@@ -92,7 +94,7 @@ const Experience = ({
               href={employerUrl}
               target="_blank"
               rel="noreferrer"
-              className="text-primary-light dark:text-primary-dark hover:underline cursor-pointer"
+              className="text-primary-light dark:text-primary-dark hover:underline decoration-wavy underline-offset-8 cursor-pointer"
             >
               {employerName}
             </a>
