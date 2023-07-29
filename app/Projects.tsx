@@ -8,29 +8,44 @@ export const Projects = () => {
   return (
     <div className="mt-40">
       <div className="text-3xl font-bold text-primary-light dark:text-primary-dark text-center">
-        Projects
+        Public Projects
       </div>
 
       <ul className="mt-8 space-y-8 lg:space-y-4">
         <Project
           key="koople"
-          title="Koople Hobby Redesign"
+          title="Koople UI"
           link="http://patata.danielagg.com/"
-          desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus velit unde aliquam impedit, quam earum reprehenderit consectetur, officia repellat odit esse veniam similique, deserunt cumque necessitatibus consequatur facilis placeat? Ut tenetur qui dolore perferendis, quia odio! Fuga voluptatem quos dignissimos."
+          desc="Koople is a feature-management tool, offering an easy way to use feature flags and remote configurations. This is a redesign of the dashboard of the app, written in NextJS with ShadCN UI, deployed to Vercel."
+          githubLinks={{
+            link: "https://github.com/danielagg/pata-with-shadcn",
+          }}
         />
 
         <Project
-          key="flashcard-game"
-          title="Flashcard Language Learning Memory Game"
-          link="http://flashcards.danielagg.com/"
+          key="restaurant-backoffice"
+          title="Restaurant Backoffice"
+          link="#"
           desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus velit unde aliquam impedit, quam earum reprehenderit consectetur, officia repellat odit esse veniam similique, deserunt cumque necessitatibus consequatur facilis placeat? Ut tenetur qui dolore perferendis, quia odio! Fuga voluptatem quos dignissimos."
+          githubLinks={{
+            link: "https://github.com/danielagg/restaurant-backoffice",
+          }}
         />
 
         <Project
-          key="payment-tracker"
-          title="Payment Tracker App"
-          link="http://payment-tracker.danielagg.com/"
-          desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus velit unde aliquam impedit, quam earum reprehenderit consectetur, officia repellat odit esse veniam similique, deserunt cumque necessitatibus consequatur facilis placeat? Ut tenetur qui dolore perferendis, quia odio! Fuga voluptatem quos dignissimos."
+          key="personal-website"
+          title="This Website"
+          desc="This exact website: my personal website and blog. The tech powering the sites change frequently, as I use them as playgrounds to check out different frameworks and libraries. The current iteration for the blog is Astro, and this website is running on NextJS, with TypeScript and React, using TailwindCSS for styling."
+          githubLinks={[
+            {
+              label: "Website",
+              link: "https://github.com/danielagg/personal-website-nextjs",
+            },
+            {
+              label: "Blog",
+              link: "https://github.com/danielagg/personal-blog-astro",
+            },
+          ]}
         />
       </ul>
     </div>
@@ -41,24 +56,39 @@ const Project = ({
   title,
   desc,
   link,
+  githubLinks,
 }: {
   title: string;
   desc: string;
-  link: string;
+  link?: string;
+  githubLinks:
+    | {
+        link: string;
+      }
+    | {
+        label: string;
+        link: string;
+      }[];
 }) => {
   return (
     <li>
       <Card>
         <>
           <div className="flex items-center justify-between space-x-4">
-            <a
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xl font-bold hover:underline decoration-wavy underline-offset-8 text-primary-light dark:text-primary-dark"
-            >
-              {title}
-            </a>
+            {link ? (
+              <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xl font-bold hover:underline decoration-wavy underline-offset-8 text-primary-light dark:text-primary-dark"
+              >
+                {title}
+              </a>
+            ) : (
+              <h2 className="text-xl font-bold text-primary-light dark:text-primary-dark">
+                {title}
+              </h2>
+            )}
           </div>
 
           <div className="text-gray-light dark:text-gray-dark text-sm mt-2">

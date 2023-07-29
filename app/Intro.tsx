@@ -12,7 +12,7 @@ export const Intro = () => {
           dan
         </div>
         <div className="text-lg lg:text-2xl mt-1 lg:mt-4 text-primary-light dark:text-primary-dark">
-          full stack developer @{" "}
+          Full stack developer @{" "}
           <a
             href="https://apiumhub.com/"
             target="_blank"
