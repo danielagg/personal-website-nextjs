@@ -38,11 +38,11 @@ export const Projects = () => {
           desc="This exact website: my personal website and blog. The tech powering the sites change frequently, as I use them as playgrounds to check out different frameworks and libraries. The current iteration for the blog is Astro, and this website is running on NextJS, with TypeScript and React, using TailwindCSS for styling."
           githubLinks={[
             {
-              label: "Website",
+              label: "View source of the website",
               link: "https://github.com/danielagg/personal-website-nextjs",
             },
             {
-              label: "Blog",
+              label: "View source of the blog",
               link: "https://github.com/danielagg/personal-blog-astro",
             },
           ]}
@@ -95,11 +95,32 @@ const Project = ({
             {desc}
           </div>
 
-          <div className="pt-4">
-            <a className="text-sm cursor-pointer hover:underline decoration-wavy underline-offset-8 text-primary-light dark:text-primary-dark">
-              View source @ GitHub
+          {Array.isArray(githubLinks) ? (
+            <div className="flex items-center space-x-12 pt-4">
+              {githubLinks.map((gh) => {
+                return (
+                  <a
+                    key={gh.label}
+                    className="block text-sm cursor-pointer hover:underline decoration-wavy underline-offset-8 text-primary-light dark:text-primary-dark"
+                    href={gh.link}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {gh.label}
+                  </a>
+                );
+              })}
+            </div>
+          ) : (
+            <a
+              className="block pt-4 text-sm cursor-pointer hover:underline decoration-wavy underline-offset-8 text-primary-light dark:text-primary-dark"
+              href={githubLinks.link}
+              target="_blank"
+              rel="noreferrer"
+            >
+              View source on GitHub
             </a>
-          </div>
+          )}
         </>
       </Card>
     </li>
