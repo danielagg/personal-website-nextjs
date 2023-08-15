@@ -26,7 +26,7 @@ export const Projects = () => {
           key="quote-generator"
           title="HTMX/Go Serverless Quote Generator"
           link="https://htmx-quotes.danielagg.com/"
-          desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus velit unde aliquam impedit, quam earum reprehenderit consectetur, officia repellat odit esse veniam similique, deserunt cumque necessitatibus consequatur facilis placeat? Ut tenetur qui dolore perferendis, quia odio! Fuga voluptatem quos dignissimos."
+          desc="A small CRUD app to fetch/rate/manage quotes. I wanted to play around with HTMX to get a sense for an alternative way of building web apps."
           githubLinks={{
             link: "https://github.com/danielagg/htmx-playaround",
           }}
@@ -36,7 +36,7 @@ export const Projects = () => {
           key="restaurant-backoffice"
           title="Restaurant Backoffice"
           link="#"
-          desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus velit unde aliquam impedit, quam earum reprehenderit consectetur, officia repellat odit esse veniam similique, deserunt cumque necessitatibus consequatur facilis placeat? Ut tenetur qui dolore perferendis, quia odio! Fuga voluptatem quos dignissimos."
+          desc="A sample ASP.NET Core project I use to play around with new features of .NET/C#, as well as practice Domain Driven Design."
           githubLinks={{
             link: "https://github.com/danielagg/restaurant-backoffice",
           }}
@@ -45,7 +45,7 @@ export const Projects = () => {
         <Project
           key="personal-website"
           title="This Website"
-          desc="This exact website: my personal website and blog. The tech powering the sites change frequently, as I use them as playgrounds to check out different frameworks and libraries. The current iteration for the blog is Astro, and this website is running on NextJS, with TypeScript and React, using TailwindCSS for styling."
+          desc="This exact website - the tech powering my site and blog change frequently, as I use them as playgrounds to check out different frameworks and libraries. The current iteration for the blog is Astro, and this website is running on NextJS, with TypeScript and React, using TailwindCSS for styling."
           githubLinks={[
             {
               label: "View source of the website",
