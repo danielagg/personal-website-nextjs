@@ -23,9 +23,9 @@ export const Intro = () => {
           </a>
         </div>
         <div className="mt-10 text-gray-light dark:text-gray-dark w-full lg:w-3/4 leading-7 tracking-wide">
-          Hi there! I&apos;m Daniel Agg, a Full Stack Developer with over 7
-          years of experience. I have a strong skill set in building both back-,
-          and frontend solutions using various technologies (.NET, Go,
+          Hi! I&apos;m Daniel Agg, a Full Stack Developer with over 7 years of
+          experience. I have a strong skill set in building both back-, and
+          frontend solutions using various technologies (.NET, Go,
           TypeScript/JavaScript with React/Svelte/Solid). I have expertise in
           designing and developing scalable architectures, mostly on
           Microsoft&apos;s Azure platform.

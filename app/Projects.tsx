@@ -23,6 +23,16 @@ export const Projects = () => {
         />
 
         <Project
+          key="quote-generator"
+          title="HTMX/Go Serverless Quote Generator"
+          link="https://htmx-quotes.danielagg.com/"
+          desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus velit unde aliquam impedit, quam earum reprehenderit consectetur, officia repellat odit esse veniam similique, deserunt cumque necessitatibus consequatur facilis placeat? Ut tenetur qui dolore perferendis, quia odio! Fuga voluptatem quos dignissimos."
+          githubLinks={{
+            link: "https://github.com/danielagg/htmx-playaround",
+          }}
+        />
+
+        <Project
           key="restaurant-backoffice"
           title="Restaurant Backoffice"
           link="#"
