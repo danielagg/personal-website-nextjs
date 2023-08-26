@@ -13,12 +13,22 @@ export const Projects = () => {
 
       <ul className="mt-8 space-y-8 lg:space-y-4">
         <Project
-          key="koople"
-          title="Koople UI"
+          key="koople-v2"
+          title="Koople UI v2"
           link="http://patata.danielagg.com/"
           desc="Koople is a feature-management tool, offering an easy way to use feature flags and remote configurations. This is a redesign of the dashboard of the app, written in NextJS with ShadCN UI, deployed to Vercel."
           githubLinks={{
             link: "https://github.com/danielagg/pata-with-shadcn",
+          }}
+        />
+
+        <Project
+          key="material-allergen-manager"
+          title="Material Allergen Manager"
+          link="https://material-allergen-manager.danielagg.com/"
+          desc="An ASP.NET Core project using Domain Driven Design, with a SvelteKit frontend, where materials and their allergen classifications can be managed."
+          githubLinks={{
+            link: "https://github.com/danielagg/material-allergen-management-app",
           }}
         />
 
@@ -29,16 +39,6 @@ export const Projects = () => {
           desc="A small CRUD app to fetch/rate/manage quotes. I wanted to play around with HTMX to get a sense for an alternative way of building web apps."
           githubLinks={{
             link: "https://github.com/danielagg/htmx-playaround",
-          }}
-        />
-
-        <Project
-          key="restaurant-backoffice"
-          title="Restaurant Backoffice"
-          link="#"
-          desc="A sample ASP.NET Core project I use to play around with new features of .NET/C#, as well as practice Domain Driven Design."
-          githubLinks={{
-            link: "https://github.com/danielagg/restaurant-backoffice",
           }}
         />
 
