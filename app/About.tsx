@@ -16,7 +16,7 @@ export const About = () => {
           alt="Picture of Daniel Agg"
           width={156}
           height={156}
-          className="mb-12 lg:mb-0 block rounded-full shadow dark:opacity-80"
+          className="mb-12 lg:mb-0 block rounded-full shadow dark:opacity-80 ring-profilepic-light dark:ring-profilepic-dark ring-8"
         />
       </div>
 

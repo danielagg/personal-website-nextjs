@@ -19,6 +19,10 @@ module.exports = {
         dark: "#03081f",
         light: "#edeceb",
       },
+      profilepic: {
+        dark: "#0f172a",
+        light: "#e8e8e8",
+      },
       gray: {
         dark: "#64748B",
         light: "#71717a",

@@ -29,7 +29,7 @@ export const Intro = () => {
           expertise in designing and developing scalable architectures, mostly
           on Microsoft&apos;s Azure platform.
         </p>
-        <p className="mt-6 opacity-50 text-sm w-full lg:w-3/4">
+        <p className="mt-6 opacity-70 dark:opacity-50 text-sm w-full lg:w-3/4">
           I am passionate about researching adaptable sofware architectures,
           enabling applications to gracefully evolve over time. I have learnt
           over time that as business needs change and technology advances,
