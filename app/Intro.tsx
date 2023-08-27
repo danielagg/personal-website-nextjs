@@ -29,19 +29,6 @@ export const Intro = () => {
           expertise in designing and developing scalable architectures, mostly
           on Microsoft&apos;s Azure platform.
         </p>
-        <p className="mt-6 opacity-70 dark:opacity-50 text-sm w-full lg:w-3/4">
-          I am passionate about researching adaptable sofware architectures,
-          enabling applications to gracefully evolve over time. I have learnt
-          over time that as business needs change and technology advances,
-          having an architecture that can accommodate change is extremely
-          important, but often neglected. As of 2023, I am a preacher of modular
-          monoliths, Domain Driven Design and compartmentalizing volatile parts
-          of applications, rather than religiously de-coupling them by
-          functionality. As much as I enjoy geeking out over architectures, I
-          like to think that I am pragmatic, always keeping in mind that my goal
-          as a software developer is to deliver a working product, not the
-          blueprint of it.
-        </p>
 
         <div className="flex flex-col lg:flex-row items-start lg:items-center space-y-4 lg:space-y-0 lg:space-x-4 mt-12">
           <Button onClick={() => window.open("/DanielAgg_CV.pdf")}>

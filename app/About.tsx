@@ -21,22 +21,28 @@ export const About = () => {
       </div>
 
       <div className="mt-6 lg:mt-16">
-        <div className="flex flex-col space-y-8">
-          <p>
-            I&apos;ve started my career as a .NET developer, working almost
-            exclusively on ASP.NET Core backends, before immersing myself in
-            frontend development, aiming to become a competent full-stack
-            engineer.
-          </p>
-
-          <p>
-            Currently, my day-to-day work revolves around switching between
-            developing a React frontend (Typescript, TailwindCSS and
-            react-query), an ASP.NET Core backend (following Domain Driven
-            Design principals) and general infrastructure development on Azure,
-            with Terraform.
-          </p>
-        </div>
+        <p className="text-center text-sm opacity-70">
+          I&apos;m a preacher for modular monoliths, Domain Driven Design, true
+          CI/CD with Trunk Based Development, feature flags, fitness functions,
+          procedural code and compartmentalizing volatile parts of our
+          applications, rather than religiously de-coupling by functionality.
+        </p>
+        <p className="text-center text-sm opacity-70 pt-4">
+          I&apos;m passionate about researching adaptable sofware architectures,
+          enabling applications to gracefully evolve over time. I came to
+          realize that in the ever-changing landscape of business needs and
+          technological advances, having an adaptable architecture is crucial,
+          providing the advantage of keeping the tempo of development rapid,
+          without accumulating considerable technical debt. Yet, it remains
+          common to not pay attention to plan and consistently maintain the
+          architecture of our applications.
+        </p>
+        <p className="text-center text-sm opacity-70 pt-4">
+          While I love geeking out over architectures, I like to think that
+          I&apos;m also pragmatic, always keeping in mind that my goal as a
+          software developer is to deliver a working product, not the blueprint
+          of it.
+        </p>
         <div className="mt-12 flex flex-col space-y-8 lg:space-y-4">
           <Experience
             title="Full Stack Developer"
