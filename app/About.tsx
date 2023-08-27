@@ -22,10 +22,11 @@ export const About = () => {
 
       <div className="mt-6 lg:mt-16">
         <p className="text-center text-sm opacity-70">
-          I&apos;m a preacher for modular monoliths, Domain Driven Design, true
-          CI/CD with Trunk Based Development, feature flags, fitness functions,
-          procedural code and compartmentalizing volatile parts of our
-          applications, rather than religiously de-coupling by functionality.
+          I&apos;m a preacher for modular monoliths with vertical slicing,
+          Domain Driven Design, true CI/CD with Trunk Based Development and
+          feature flags, fitness functions, procedural code and
+          compartmentalizing volatile parts of our applications, rather than
+          religiously de-coupling by functionality.
         </p>
         <p className="text-center text-sm opacity-70 pt-4">
           I&apos;m passionate about researching adaptable sofware architectures,
