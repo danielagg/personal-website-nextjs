@@ -21,14 +21,14 @@ export const About = () => {
       </div>
 
       <div className="mt-6 lg:mt-16">
-        <p className="text-center text-sm opacity-70">
+        <p className="text-center text-sm opacity-100 dark:opacity-70">
           I&apos;m a preacher for modular monoliths with vertical slicing,
           Domain Driven Design, true CI/CD with Trunk Based Development and
           feature flags, fitness functions, procedural code and
           compartmentalizing volatile parts of our applications, rather than
           religiously de-coupling by functionality.
         </p>
-        <p className="text-center text-sm opacity-70 pt-4">
+        <p className="text-center text-sm opacity-100 dark:opacity-70 pt-4">
           I&apos;m passionate about researching adaptable sofware architectures,
           enabling applications to gracefully evolve over time. I came to
           realize that in the ever-changing landscape of business needs and
@@ -38,7 +38,7 @@ export const About = () => {
           common to not pay attention to plan and consistently maintain the
           architecture of our applications.
         </p>
-        <p className="text-center text-sm opacity-70 pt-4">
+        <p className="text-center text-sm opacity-100 dark:opacity-70 pt-4">
           While I love geeking out over architectures, I like to think that
           I&apos;m also pragmatic, always keeping in mind that my goal as a
           software developer is to deliver a working product, not the blueprint
@@ -102,7 +102,7 @@ const Experience = ({
               href={employerUrl}
               target="_blank"
               rel="noreferrer"
-              className="text-primary-light dark:text-primary-dark hover:underline decoration-wavy underline-offset-8 cursor-pointer"
+              className="text-primary-light dark:text-primary-dark hover:underline decoration-wavy underline-offset-8 cursor-pointer hover:text-button-light-hover hover:dark:text-primary-dark"
             >
               {employerName}
             </a>

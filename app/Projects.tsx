@@ -90,7 +90,7 @@ const Project = ({
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xl font-bold hover:underline decoration-wavy underline-offset-8 text-primary-light dark:text-primary-dark"
+                className="text-xl font-bold hover:underline decoration-wavy underline-offset-8 text-primary-light dark:text-primary-dark hover:text-button-light-hover hover:dark:text-primary-dark"
               >
                 {title}
               </a>
@@ -111,7 +111,7 @@ const Project = ({
                 return (
                   <a
                     key={gh.label}
-                    className="block text-sm cursor-pointer hover:underline decoration-wavy underline-offset-8 text-primary-light dark:text-primary-dark"
+                    className="block text-sm cursor-pointer hover:underline decoration-wavy underline-offset-8 text-primary-light dark:text-primary-dark hover:text-button-light-hover hover:dark:text-primary-dark"
                     href={gh.link}
                     target="_blank"
                     rel="noreferrer"
@@ -123,7 +123,7 @@ const Project = ({
             </div>
           ) : (
             <a
-              className="block pt-4 text-sm cursor-pointer hover:underline decoration-wavy underline-offset-8 text-primary-light dark:text-primary-dark"
+              className="block pt-4 text-sm cursor-pointer hover:underline decoration-wavy underline-offset-8 text-primary-light dark:text-primary-dark hover:text-button-light-hover hover:dark:text-primary-dark"
               href={githubLinks.link}
               target="_blank"
               rel="noreferrer"

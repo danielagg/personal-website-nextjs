@@ -17,7 +17,7 @@ export const Intro = () => {
             href="https://apiumhub.com/"
             target="_blank"
             rel="noreferrer"
-            className="font-bold cursor-pointer underline decoration-wavy underline-offset-8"
+            className="font-bold cursor-pointer underline decoration-wavy underline-offset-8 hover:text-button-light-hover hover:dark:text-primary-dark"
           >
             Apiumhub
           </a>

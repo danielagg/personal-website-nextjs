@@ -31,7 +31,7 @@ module.exports = {
         dark: "#1e293b",
         light: "#1e293b",
         "dark-hover": "#334155",
-        "light-hover": "#44403c",
+        "light-hover": "#cc0e9c", //"#44403c",
       },
     },
     extend: {
