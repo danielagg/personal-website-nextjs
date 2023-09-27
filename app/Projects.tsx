@@ -6,10 +6,10 @@ import { GitHub } from "./components/Github";
 
 export const Projects = () => {
   return (
-    <div className="mt-40">
-      <div className="text-3xl font-bold text-primary-light dark:text-primary-dark text-center">
+    <section className="mt-40">
+      <h1 className="text-3xl font-bold text-primary-light dark:text-primary-dark text-center">
         Public Projects
-      </div>
+      </h1>
 
       <ul className="mt-8 space-y-8 lg:space-y-4">
         <Project
@@ -58,7 +58,7 @@ export const Projects = () => {
           ]}
         />
       </ul>
-    </div>
+    </section>
   );
 };
 
@@ -101,12 +101,12 @@ const Project = ({
             )}
           </div>
 
-          <div className="text-gray-light dark:text-gray-dark text-sm mt-2">
+          <p className="text-gray-light dark:text-gray-dark text-sm mt-2">
             {desc}
-          </div>
+          </p>
 
           {Array.isArray(githubLinks) ? (
-            <div className="flex items-center space-x-12 pt-4">
+            <section className="flex items-center space-x-12 pt-4">
               {githubLinks.map((gh) => {
                 return (
                   <a
@@ -120,7 +120,7 @@ const Project = ({
                   </a>
                 );
               })}
-            </div>
+            </section>
           ) : (
             <a
               className="block pt-4 text-sm cursor-pointer hover:underline decoration-wavy underline-offset-8 text-primary-light dark:text-primary-dark hover:text-button-light-hover hover:dark:text-primary-dark"

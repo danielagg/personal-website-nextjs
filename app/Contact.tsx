@@ -7,45 +7,72 @@ import { Success } from "./contact/Success";
 import { ValidationError } from "./contact/ValidationError";
 import { SubmitError } from "./contact/SubmitError";
 
+interface ContactFormValues {
+  name: string;
+  email: string;
+  message: string;
+}
+
+interface ContactFormState {
+  hasValidationError: boolean;
+  isSendingEmailInProgress: boolean;
+  isSubmitSuccess: boolean;
+  isSubmitFailure: boolean;
+}
+
 export const Contact = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [values, setValues] = useState<ContactFormValues>({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-  const [hasValidationError, setHasValidationError] = useState(false);
+  const [formState, setFormState] = useState<ContactFormState>({
+    hasValidationError: false,
+    isSendingEmailInProgress: false,
+    isSubmitSuccess: false,
+    isSubmitFailure: false,
+  });
 
-  const [isSendingEmailInProgress, setIsSendingEmailInProgress] =
-    useState(false);
+  const areAnyFieldsOnFormFilled =
+    values.name.length > 0 || values.email.length > 0 || values.name.length > 0;
 
-  const [isSubmitSuccess, setIsSubmitSuccess] = useState(false);
-  const [isSubmitFailure, setIsSubmitFailure] = useState(false);
+  const areFormValuesInvalid =
+    values.name.length > 0 && values.email.length > 0 && values.name.length > 0;
 
   useEffect(() => {
-    const anyFilled = !!(name || email || message);
-
     // if nothing is filled on the form, lets consider it as "initial state", it's not in error
-    if (!anyFilled) {
-      setHasValidationError(false);
+    if (!areAnyFieldsOnFormFilled) {
+      setFormState((prev) => ({
+        ...prev,
+        hasValidationError: false,
+      }));
       return;
     }
 
-    const isValid = !!(name && email && message);
-    setHasValidationError(!isValid);
-  }, [name, email, message]);
+    // we make sure all fields are filled
+    setFormState((prev) => ({
+      ...prev,
+      hasValidationError: areFormValuesInvalid,
+    }));
+  }, [values]);
 
   const onSubmit = async () => {
-    const isValid = !!(name && email && message);
-    if (!isValid) {
-      setHasValidationError(true);
+    if (!areFormValuesInvalid) {
+      setFormState((prev) => ({
+        ...prev,
+        hasValidationError: true,
+      }));
       return;
     }
 
-    if (isSendingEmailInProgress) return;
+    if (formState.isSendingEmailInProgress) return;
 
     try {
-      setIsSendingEmailInProgress(true);
+      setFormState((prev) => ({ ...prev, isSendingEmailInProgress: true }));
+
       const res = await fetch(
-        `/contact?name=${name}&email=${email}&message=${message}`,
+        `/contact?name=${values.name}&email=${values.email}&message=${values.message}`,
         {
           body: JSON.stringify({}),
           headers: {
@@ -54,30 +81,33 @@ export const Contact = () => {
           method: "POST",
         }
       );
-      const { error } = await res.json();
 
+      const { error } = await res.json();
       if (error) {
         console.log(error);
         return;
       }
 
-      setIsSubmitSuccess(true);
+      // if we succeeded, for a few sec we show a feedback to the user
+      setFormState((prev) => ({ ...prev, isSubmitSuccess: true }));
       setTimeout(() => {
-        setIsSubmitSuccess(false);
+        setFormState((prev) => ({ ...prev, isSubmitSuccess: false }));
       }, 4000);
 
       // reset form
-      setName("");
-      setEmail("");
-      setMessage("");
+      setValues({
+        name: "",
+        email: "",
+        message: "",
+      });
     } catch (error) {
-      setIsSubmitFailure(true);
+      // if we failed, again show feedback to the user for a few sec
+      setFormState((prev) => ({ ...prev, isSubmitFailure: true }));
       setTimeout(() => {
-        setIsSubmitFailure(false);
+        setFormState((prev) => ({ ...prev, isSubmitFailure: false }));
       }, 4000);
-      console.error(error);
     }
-    setIsSendingEmailInProgress(false);
+    setFormState((prev) => ({ ...prev, isSendingEmailInProgress: false }));
   };
 
   const SubmitButton = () => {
@@ -88,7 +118,7 @@ export const Contact = () => {
         }}
       >
         <div className="w-full flex items-center justify-center space-x-2">
-          {isSendingEmailInProgress && (
+          {formState.isSendingEmailInProgress && (
             <svg
               role="status"
               className="inline mr-2 w-6 h-6 text-gray-200 hover:text-green-500 animate-spin fill-gray-600 hover:fill-green-500"
@@ -106,35 +136,41 @@ export const Contact = () => {
               />
             </svg>
           )}
-          <div>{isSendingEmailInProgress ? "Sending..." : "Send"}</div>
+          <div>
+            {formState.isSendingEmailInProgress ? "Sending..." : "Send"}
+          </div>
         </div>
       </Button>
     );
   };
 
   return (
-    <div id="contact" className="w-full my-40 flex justify-center">
+    <section id="contact" className="w-full my-40 flex justify-center">
       <div className="w-full flex justify-center items-center">
         <div className="w-full">
-          <div className="text-3xl font-bold text-primary-light dark:text-primary-dark text-center">
+          <h1 className="text-3xl font-bold text-primary-light dark:text-primary-dark text-center">
             Get in Touch
-          </div>
+          </h1>
 
-          <div className="flex flex-col lg:flex-row w-full lg:justify-between">
+          <section className="flex flex-col lg:flex-row w-full lg:justify-between">
             <div className="w-full lg:w-2/5 flex flex-col space-y-8 mt-12">
               <TextInput
                 id="fullname"
                 label="Your name"
-                value={name}
-                setValue={setName}
+                value={values.name}
+                setValue={(newValue) =>
+                  setValues((prev) => ({ ...prev, name: newValue }))
+                }
                 placeHolder="Enter your name here"
               />
 
               <TextInput
                 id="email"
                 label="Your email"
-                value={email}
-                setValue={setEmail}
+                value={values.email}
+                setValue={(newValue) =>
+                  setValues((prev) => ({ ...prev, email: newValue }))
+                }
                 placeHolder="Enter your email address here"
               />
 
@@ -151,8 +187,10 @@ export const Contact = () => {
                   Your message
                 </label>
                 <textarea
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
+                  value={values.message}
+                  onChange={(e) =>
+                    setValues((prev) => ({ ...prev, message: e.target.value }))
+                  }
                   placeholder="Write your message here"
                   className="appearance-none text-gray-700 dark:text-slate-300 dark:bg-slate-900 p-2 rounded mt-1 w-full resize-none text-sm dark:placeholder:text-slate-600 border border-slate-300 dark:border-none"
                   rows={11}
@@ -163,27 +201,27 @@ export const Contact = () => {
             <div className="block lg:hidden mt-8">
               <SubmitButton />
             </div>
-          </div>
+          </section>
 
-          {hasValidationError && (
+          {formState.hasValidationError && (
             <div className="mt-6">
               <ValidationError />
             </div>
           )}
 
-          {isSubmitSuccess && (
+          {formState.isSubmitSuccess && (
             <div className="mt-6">
               <Success />
             </div>
           )}
 
-          {isSubmitFailure && (
+          {formState.isSubmitFailure && (
             <div className="mt-6">
               <SubmitError />
             </div>
           )}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
