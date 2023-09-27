@@ -30,14 +30,12 @@ export const About = () => {
             de-couple by functionality/requirement.
           </p>
           <p>
-            I&apos;m passionate about researching adaptable sofware
-            architectures, enabling applications to gracefully evolve over time.
-            I came to realize that in the ever-changing landscape of business
-            needs and technological advances, having an adaptable architecture
-            is crucial, providing the advantage of keeping the tempo of
-            development rapid, without accumulating considerable technical debt.
-            Yet, it remains common to not pay attention to plan and consistently
-            maintain the architecture of our applications.
+            I&apos;m passionate about researching adaptable software
+            architectures, enabling applications to gracefully evolve. I came to
+            realize that in the ever-changing landscape of business needs and
+            technological advancements, having an adaptable architecture is
+            crucial, providing the advantage of keeping the tempo of development
+            rapid, without accumulating considerable technical debt.
           </p>
           <p>
             While I love geeking out over architectures, I like to think that
