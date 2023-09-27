@@ -6,8 +6,8 @@ import { Twitter } from "./components/Twitter";
 
 export const Intro = () => {
   return (
-    <div className="my-24 lg:my-64 flex items-center justify-center w-full relative">
-      <div className="-mt-16 z-10 w-full flex flex-col">
+    <main className="my-24 lg:my-64 flex items-center justify-center w-full relative">
+      <section className="-mt-16 z-10 w-full flex flex-col">
         <h1 className="font-bold text-5xl lg:text-7xl text-primary-light dark:text-primary-dark">
           dan
         </h1>
@@ -30,7 +30,7 @@ export const Intro = () => {
           on Microsoft&apos;s Azure platform.
         </p>
 
-        <div className="flex flex-col lg:flex-row items-start lg:items-center space-y-4 lg:space-y-0 lg:space-x-4 mt-12">
+        <section className="flex flex-col lg:flex-row items-start lg:items-center space-y-4 lg:space-y-0 lg:space-x-4 mt-12">
           <Button onClick={() => window.open("/DanielAgg_CV.pdf")}>
             Download CV
           </Button>
@@ -53,8 +53,8 @@ export const Intro = () => {
             <GitHub />
             <Twitter />
           </div>
-        </div>
-      </div>
-    </div>
+        </section>
+      </section>
+    </main>
   );
 };

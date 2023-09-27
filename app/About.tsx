@@ -6,7 +6,7 @@ import { Card } from "./components/Card";
 
 export const About = () => {
   return (
-    <div
+    <article
       id="about"
       className="w-full mt-12 text-gray-light dark:text-gray-dark"
     >
@@ -23,11 +23,11 @@ export const About = () => {
 
         <div className="w-full lg:w-2/3 mt-16 text-center lg:text-right space-y-4 text-sm opacity-100 dark:opacity-70">
           <p>
-            I&apos;m a preacher for modular monoliths with vertical slicing,
-            Domain Driven Design, true CI/CD with Trunk Based Development and
-            feature flags, fitness functions, procedural code and
-            compartmentalizing volatile parts of our applications, rather than
-            religiously de-coupling by functionality.
+            I advocate for modular monoliths with vertical slicing, Domain
+            Driven Design, true CI/CD with Trunk Based Development and feature
+            flags, fitness functions, procedural code and compartmentalizing
+            volatile parts of our applications, rather than dogmatically
+            de-couple by functionality/requirement.
           </p>
           <p>
             I&apos;m passionate about researching adaptable sofware
@@ -48,36 +48,36 @@ export const About = () => {
         </div>
       </div>
 
-      <div className="mt-12 lg:mt-32 flex flex-col space-y-8 lg:space-y-4">
+      <ul className="mt-12 lg:mt-32 flex flex-col space-y-8 lg:space-y-4">
         <Experience
           title="Full Stack Developer"
           period="Apr 2021 - Present"
           employerName="Apiumhub"
           employerUrl="https://apiumhub.com/"
-          desc="I'm currently employed as a full stack developer, working on a React front-, and an ASP.NET Core Web API backend."
+          desc="I'm currently employed as a full stack developer, working on a React front-, and an ASP.NET Core Web API backend, as well as taking care of the project's DevOps duties and infrastructure on Azure."
         />
         <Experience
           title="Full Stack Developer"
           period="Sep 2018 - Apr 2021"
           employerName="Glownexus"
           employerUrl="https://www.glownexus.com/"
-          desc="I was employed as a full stack developer, working on a React front-, and an ASP.NET Core Web API backend. I also participated in DevOps duties and general infrastructure development with Azure."
+          desc="I've worked on diverse projects, from small-scale serverless apps running on Azure Functions, to enterprise monolith solutions. My main responsibilities were around .NET backends."
         />
         <Experience
-          title=".NET Developer"
+          title=".NET Developer / Junior .NET Developer"
           period="May 2016 - Sep 2018"
           employerName="Atos Consulting"
           employerUrl="https://atos.net/en-hu/hungary/atos-consulting"
-          desc="I was working on various, brown-field backends developed in the .NET ecosystem - mostly via ASP.NET with WCF."
+          desc="I was working on various, brown-field backends developed in the .NET ecosystem (with strong emphasis on SQL)."
         />
-      </div>
+      </ul>
 
       <div className="mt-12 inline-flex justify-center items-center w-full">
         <Button onClick={() => window.open("/DanielAgg_CV.pdf")}>
           Download CV
         </Button>
       </div>
-    </div>
+    </article>
   );
 };
 
@@ -95,25 +95,27 @@ const Experience = ({
   desc: string;
 }) => {
   return (
-    <Card>
-      <>
-        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between">
-          <div className="flex flex-col lg:flex-row items-start lg:items-center lg:space-x-2">
-            <div className="text-xl font-bold">{title}</div>
-            <div className="hidden lg:block">@</div>
-            <a
-              href={employerUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="text-primary-light dark:text-primary-dark hover:underline decoration-wavy underline-offset-8 cursor-pointer hover:text-button-light-hover hover:dark:text-primary-dark"
-            >
-              {employerName}
-            </a>
+    <li>
+      <Card>
+        <>
+          <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between">
+            <div className="flex flex-col lg:flex-row items-start lg:items-center lg:space-x-2">
+              <div className="text-xl font-bold">{title}</div>
+              <div className="hidden lg:block">@</div>
+              <a
+                href={employerUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="text-primary-light dark:text-primary-dark hover:underline decoration-wavy underline-offset-8 cursor-pointer hover:text-button-light-hover hover:dark:text-primary-dark"
+              >
+                {employerName}
+              </a>
+            </div>
+            <div className="text-sm opacity-50 dark:opacity-70">{period}</div>
           </div>
-          <div className="text-sm opacity-50 dark:opacity-70">{period}</div>
-        </div>
-        <div className="pt-4 text-sm">{desc}</div>
-      </>
-    </Card>
+          <div className="pt-4 text-sm">{desc}</div>
+        </>
+      </Card>
+    </li>
   );
 };
