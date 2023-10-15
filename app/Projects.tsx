@@ -25,7 +25,7 @@ export const Projects = () => {
         <Project
           key="material-allergen-manager"
           title="Material Allergen Manager"
-          // link="https://mam.danielagg.com/"
+          link="https://mam.danielagg.com/"
           desc="An ASP.NET Core project using Domain Driven Design, with a SvelteKit frontend, where materials and their allergen classifications can be managed."
           githubLinks={{
             link: "https://github.com/danielagg/material-allergen-management-app",
