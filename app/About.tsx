@@ -49,10 +49,10 @@ export const About = () => {
       <ul className="mt-12 lg:mt-32 flex flex-col space-y-8 lg:space-y-4">
         <Experience
           title="Full Stack Developer"
-          period="Apr 2021 - Present"
+          period="Apr 2021 - Nov 2023"
           employerName="Apiumhub"
           employerUrl="https://apiumhub.com/"
-          desc="I'm currently employed as a full stack developer, working on a React front-, and an ASP.NET Core Web API backend, as well as taking care of the project's DevOps duties and infrastructure on Azure."
+          desc="As a full stack developer, I was working on a React front-, and an ASP.NET Core Web API backend for a B2B application, as well as taking care of the project's DevOps duties and infrastructure on Azure."
         />
         <Experience
           title="Full Stack Developer"

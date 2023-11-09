@@ -9,10 +9,11 @@ export const Intro = () => {
     <main className="my-24 lg:my-64 flex items-center justify-center w-full relative">
       <section className="-mt-16 z-10 w-full flex flex-col">
         <h1 className="font-bold text-5xl lg:text-7xl text-primary-light dark:text-primary-dark">
-          dan
+          daniel
         </h1>
         <h2 className="text-lg lg:text-2xl mt-1 lg:mt-4 text-primary-light dark:text-primary-dark">
-          Full stack developer @{" "}
+          Full stack developer
+          {/* @{" "}
           <a
             href="https://apiumhub.com/"
             target="_blank"
@@ -20,7 +21,7 @@ export const Intro = () => {
             className="font-bold cursor-pointer underline decoration-wavy underline-offset-8 hover:text-button-light-hover hover:dark:text-primary-dark"
           >
             Apiumhub
-          </a>
+          </a> */}
         </h2>
         <p className="mt-10 text-gray-light dark:text-gray-dark w-full lg:w-3/4 leading-7 tracking-wide">
           Hi! I&apos;m Daniel Agg, a Full Stack Developer from the EU with over
