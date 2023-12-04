@@ -12,16 +12,15 @@ export const Intro = () => {
           daniel
         </h1>
         <h2 className="text-lg lg:text-2xl mt-1 lg:mt-4 text-primary-light dark:text-primary-dark">
-          Full stack developer
-          {/* @{" "}
+          Full stack developer @{" "}
           <a
-            href="https://apiumhub.com/"
+            href="https://openup.com/"
             target="_blank"
             rel="noreferrer"
             className="font-bold cursor-pointer underline decoration-wavy underline-offset-8 hover:text-button-light-hover hover:dark:text-primary-dark"
           >
-            Apiumhub
-          </a> */}
+            OpenUp
+          </a>
         </h2>
         <p className="mt-10 text-gray-light dark:text-gray-dark w-full lg:w-3/4 leading-7 tracking-wide">
           Hi! I&apos;m Daniel Agg, a Full Stack Developer from the EU with over

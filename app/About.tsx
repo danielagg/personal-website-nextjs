@@ -49,6 +49,13 @@ export const About = () => {
       <ul className="mt-12 lg:mt-32 flex flex-col space-y-8 lg:space-y-4">
         <Experience
           title="Full Stack Developer"
+          period="Dec 2023 - Present"
+          employerName="OpenUp"
+          employerUrl="https://openup.com/"
+          desc="TBD."
+        />
+        <Experience
+          title="Full Stack Developer"
           period="Apr 2021 - Nov 2023"
           employerName="Apiumhub"
           employerUrl="https://apiumhub.com/"
