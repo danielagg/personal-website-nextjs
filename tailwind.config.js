@@ -8,29 +8,29 @@ module.exports = {
   theme: {
     colors: {
       background: {
-        dark: "#020617",
+        dark: "#09090b",
         light: "#f5f5f4",
       },
       primary: {
-        dark: "#38BDF8",
+        dark: "#10b981",
         light: "#44403c",
       },
       accent: {
-        dark: "#03081f",
+        dark: "#18181b",
         light: "#edeceb",
       },
       profilepic: {
-        dark: "#0f172a",
+        dark: "#27272a",
         light: "#e8e8e8",
       },
       gray: {
-        dark: "#64748B",
+        dark: "#a1a1aa",
         light: "#71717a",
       },
       button: {
-        dark: "#1e293b",
+        dark: "#3f3f46",
         light: "#1e293b",
-        "dark-hover": "#334155",
+        "dark-hover": "#064e3b",
         "light-hover": "#128c7c",
       },
     },

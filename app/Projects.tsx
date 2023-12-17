@@ -5,7 +5,7 @@ import { Card } from "./components/Card";
 export const Projects = () => {
   return (
     <section className="mt-40">
-      <h1 className="text-3xl font-bold text-primary-light dark:text-primary-dark text-center">
+      <h1 className="text-3xl font-bold text-gray-light dark:text-gray-dark text-center">
         Public Projects
       </h1>
 
