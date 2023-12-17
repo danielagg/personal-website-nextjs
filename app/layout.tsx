@@ -12,7 +12,7 @@ export default function RootLayout({
 }): JSX.Element {
   return (
     <html lang="en">
-      <body className="w-full relative bg-background-light dark:bg-background-dark text-gray-500">
+      <body className="w-full relative bg-background text-gray">
         {children}
       </body>
     </html>

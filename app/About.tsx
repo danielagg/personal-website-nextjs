@@ -6,10 +6,7 @@ import { Card } from "./components/Card";
 
 export const About = () => {
   return (
-    <article
-      id="about"
-      className="w-full mt-12 text-gray-light dark:text-gray-dark"
-    >
+    <article id="about" className="w-full mt-12 text-gray">
       <div className="w-full flex lg:flex-row flex-col items-center justify-between">
         <div className="w-1/3">
           <Image
@@ -17,7 +14,7 @@ export const About = () => {
             alt="Picture of Daniel Agg"
             width={156}
             height={156}
-            className="lg:mb-0 block rounded-full shadow dark:opacity-80 ring-profilepic-light dark:ring-profilepic-dark ring-8"
+            className="lg:mb-0 block rounded-full shadow dark:opacity-80 ring-profilepic ring-8"
           />
         </div>
 
@@ -111,7 +108,7 @@ const Experience = ({
                 href={employerUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="text-primary-light dark:text-primary-dark hover:underline decoration-wavy underline-offset-8 cursor-pointer hover:text-button-light-hover hover:dark:text-primary-dark"
+                className="text-primary hover:underline decoration-wavy underline-offset-8 cursor-pointer"
               >
                 {employerName}
               </a>

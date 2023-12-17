@@ -1,7 +1,7 @@
 export const GitHub = () => {
   return (
     <div
-      className="text-button-light dark:text-button-dark hover:text-button-light-hover hover:dark:text-button-dark-hover cursor-pointer"
+      className="text-button-main hover:text-button-hover cursor-pointer"
       onClick={() => window.open("https://github.com/danielagg", "_blank")}
     >
       <svg

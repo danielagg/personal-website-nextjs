@@ -5,7 +5,7 @@ import { Card } from "./components/Card";
 export const Projects = () => {
   return (
     <section className="mt-40">
-      <h1 className="text-3xl font-bold text-gray-light dark:text-gray-dark text-center">
+      <h1 className="text-3xl font-bold text-gray text-center">
         Public Projects
       </h1>
 
@@ -88,20 +88,16 @@ const Project = ({
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xl font-bold hover:underline decoration-wavy underline-offset-8 text-primary-light dark:text-primary-dark hover:text-button-light-hover hover:dark:text-primary-dark"
+                className="text-xl font-bold hover:underline decoration-wavy underline-offset-8 text-primary"
               >
                 {title}
               </a>
             ) : (
-              <h2 className="text-xl font-bold text-primary-light dark:text-primary-dark">
-                {title}
-              </h2>
+              <h2 className="text-xl font-bold text-primary">{title}</h2>
             )}
           </div>
 
-          <p className="text-gray-light dark:text-gray-dark text-sm mt-2">
-            {desc}
-          </p>
+          <p className="text-gray text-sm mt-2">{desc}</p>
 
           {Array.isArray(githubLinks) ? (
             <section className="flex items-center space-x-12 pt-4">
@@ -109,7 +105,7 @@ const Project = ({
                 return (
                   <a
                     key={gh.label}
-                    className="block text-sm cursor-pointer hover:underline decoration-wavy underline-offset-8 text-primary-light dark:text-primary-dark hover:text-button-light-hover hover:dark:text-primary-dark"
+                    className="block text-sm cursor-pointer hover:underline decoration-wavy underline-offset-8 text-primary"
                     href={gh.link}
                     target="_blank"
                     rel="noreferrer"
@@ -121,7 +117,7 @@ const Project = ({
             </section>
           ) : (
             <a
-              className="block pt-4 text-sm cursor-pointer hover:underline decoration-wavy underline-offset-8 text-primary-light dark:text-primary-dark hover:text-button-light-hover hover:dark:text-primary-dark"
+              className="block pt-4 text-sm cursor-pointer hover:underline decoration-wavy underline-offset-8 text-primary"
               href={githubLinks.link}
               target="_blank"
               rel="noreferrer"

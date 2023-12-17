@@ -7,31 +7,14 @@ module.exports = {
   mode: "jit",
   theme: {
     colors: {
-      background: {
-        dark: "#09090b",
-        light: "#f5f5f4",
-      },
-      primary: {
-        dark: "#10b981",
-        light: "#44403c",
-      },
-      accent: {
-        dark: "#18181b",
-        light: "#edeceb",
-      },
-      profilepic: {
-        dark: "#27272a",
-        light: "#e8e8e8",
-      },
-      gray: {
-        dark: "#a1a1aa",
-        light: "#71717a",
-      },
+      background: "#09090b",
+      primary: "#10b981",
+      accent: "#18181b",
+      profilepic: "#27272a",
+      gray: "#a1a1aa",
       button: {
-        dark: "#3f3f46",
-        light: "#1e293b",
-        "dark-hover": "#064e3b",
-        "light-hover": "#128c7c",
+        main: "#3f3f46",
+        hover: "#064e3b",
       },
     },
     extend: {
