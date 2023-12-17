@@ -18,23 +18,17 @@ module.exports = {
       },
     },
     extend: {
-      fontFamily: {
-        heebo: ["Inconsolata", "sans-serif"],
-      },
       typography: (theme) => ({
         DEFAULT: {
           css: {
             h1: {
               color: theme("colors.gray.700"),
-              fontFamily: ["Inconsolata", "sans-serif"],
             },
             h2: {
               color: theme("colors.gray.700"),
-              fontFamily: ["Inconsolata", "sans-serif"],
             },
             p: {
               color: theme("colors.gray.700"),
-              fontFamily: ["Inconsolata", "sans-serif"],
               overflowWrap: "break-word",
             },
           },
