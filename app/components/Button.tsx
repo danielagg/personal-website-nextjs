@@ -10,7 +10,7 @@ export const Button = ({
   return (
     <div
       onClick={onClick}
-      className="bg-button-main hover:bg-button-hover text-primary rounded-full py-1 px-4 cursor-pointer"
+      className="lg:w-fit w-full flex justify-center items-center bg-button-main hover:bg-button-hover text-primary rounded-full py-1 px-4 cursor-pointer"
     >
       {children}
     </div>
