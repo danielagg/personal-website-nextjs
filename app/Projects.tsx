@@ -31,6 +31,16 @@ export const Projects = () => {
         />
 
         <Project
+          key="language-card"
+          title="Language Card Memory Game"
+          link="https://flashcards-v2.danielagg.com/"
+          desc="A language card memory game (EN-NL) in React, TypeScript, tRPC, Prisma and TailwindCSS, using Postgres for persistence."
+          githubLinks={{
+            link: "https://github.com/danielagg/language-cards-v3",
+          }}
+        />
+
+        <Project
           key="quote-generator"
           title="HTMX/Go Serverless Quote Generator"
           link="https://htmx-quotes.danielagg.com/"
