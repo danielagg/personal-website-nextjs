@@ -10,10 +10,10 @@ export const About = () => {
       <div className="w-full flex lg:flex-row flex-col items-center justify-between">
         <div className="w-1/3">
           <Image
-            src="/profile.jpeg"
+            src="/profile.png"
             alt="Picture of Daniel Agg"
-            width={156}
-            height={156}
+            width={160}
+            height={160}
             className="lg:mb-0 block rounded-full shadow dark:opacity-80 ring-profilepic ring-8"
           />
         </div>
