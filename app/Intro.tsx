@@ -8,9 +8,11 @@ export const Intro = () => {
   return (
     <main className="my-24 lg:my-64 flex items-center justify-center w-full relative">
       <section className="-mt-16 z-10 w-full flex flex-col">
-        <h1 className="font-bold text-5xl lg:text-7xl text-primary">daniel</h1>
-        <h2 className="text-lg lg:text-2xl mt-1 lg:mt-4 text-primary">
-          Full stack developer @{" "}
+        <h1 className="font-bold text-5xl lg:text-7xl text-primary">
+          daniel agg
+        </h1>
+        <h2 className="text-lg lg:text-2xl mt-1 lg:mt-3 text-primary/80">
+          senior full stack developer @{" "}
           <a
             href="https://openup.com/"
             target="_blank"
@@ -20,12 +22,14 @@ export const Intro = () => {
             OpenUp
           </a>
         </h2>
-        <p className="mt-10 text-gray w-full lg:w-3/4 leading-7 tracking-wide">
+        <p className="mt-10 text-gray w-full  leading-7 tracking-wide">
           Hi! I&apos;m Daniel Agg, a Full Stack Developer from the EU with over
-          7 years of experience in building web applications, with technologies
-          such as .NET, Go, TypeScript/JavaScript with React/Astro/HTMX. I have
-          expertise in designing and developing scalable architectures, mostly
-          on Microsoft&apos;s Azure platform.
+          8 years of experience in building web applications, with technologies
+          such as .NET, Go, TypeScript/JavaScript and React/Astro/HTMX.
+        </p>
+        <p className="mt-2 text-gray w-full lg:w-3/4 leading-7 tracking-wide text-lg">
+          I have expertise in designing and developing scalable architectures,
+          mostly on Microsoft&apos;s Azure platform.
         </p>
 
         <section className="flex flex-col lg:flex-row items-start lg:items-center space-y-4 lg:space-y-0 lg:space-x-4 mt-12">
@@ -47,7 +51,7 @@ export const Intro = () => {
           >
             Blog
           </Button>
-          <div className="flex space-x-4 pt-6 lg:pt-0 lg:pl-8">
+          <div className="flex space-x-4 pt-6 lg:pt-0 lg:pl-12">
             <GitHub />
             <Twitter />
           </div>
