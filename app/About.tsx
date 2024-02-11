@@ -18,21 +18,19 @@ export const About = () => {
           />
         </div>
 
-        <div className="w-full lg:w-2/3 mt-16 text-center lg:text-right space-y-4 text-sm opacity-100 dark:opacity-70">
+        <div className="w-full lg:w-2/3 mt-16 leading-relaxed text-center lg:text-right space-y-4 text-sm opacity-100 dark:opacity-70">
           <p>
             I advocate for modular monoliths with vertical slicing, Domain
             Driven Design, true CI/CD with Trunk Based Development and feature
             flags, fitness functions, procedural code and compartmentalizing
-            volatile parts of our applications, rather than dogmatically
-            de-couple by functionality/requirement.
+            volatile parts of our applications.
           </p>
           <p>
             I&apos;m passionate about researching adaptable software
-            architectures, enabling applications to gracefully evolve. I came to
-            realize that in the ever-changing landscape of business needs and
-            technological advancements, having an adaptable architecture is
-            crucial, providing the advantage of keeping the tempo of development
-            rapid, without accumulating considerable technical debt.
+            architectures, enabling applications to gracefully evolve over time:
+            I came to realize the value of an adaptable architecture, which can
+            facilitate the ever-changing landscape of business needs and keep
+            the tempo of development rapid, without accumulating technical debt.
           </p>
           <p>
             While I love geeking out over architectures, I like to think that
@@ -43,7 +41,11 @@ export const About = () => {
         </div>
       </div>
 
-      <ul className="mt-12 lg:mt-32 flex flex-col space-y-8 lg:space-y-4">
+      <h1 className="mt-12 lg:mt-32 text-3xl font-bold text-gray text-center">
+        My Experience
+      </h1>
+
+      <ul className="mt-8 flex flex-col space-y-8 lg:space-y-4">
         <Experience
           title="Senior Software Developer"
           period="Dec 2023 - Present"

@@ -51,7 +51,7 @@ export const Intro = () => {
           >
             Blog
           </Button>
-          <div className="flex space-x-4 pt-6 lg:pt-0 lg:pl-12">
+          <div className="w-full flex justify-center lg:justify-start space-x-4 pt-6 lg:pt-0 lg:pl-12">
             <GitHub />
             <Twitter />
           </div>
