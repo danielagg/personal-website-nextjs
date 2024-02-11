@@ -22,14 +22,16 @@ export const Intro = () => {
             OpenUp
           </a>
         </h2>
-        <p className="mt-10 text-gray w-full  leading-7 tracking-wide">
-          Hi! I&apos;m Daniel Agg, a Full Stack Developer from the EU with over
-          8 years of experience in building web applications, with technologies
-          such as .NET, Go, TypeScript/JavaScript and React/Astro/HTMX.
+        <p className="mt-10 text-gray w-full lg:w-5/6 leading-7 tracking-wide">
+          Hi there! I&apos;m Daniel, a Senior Full Stack Developer based in
+          Amsterdam, with more than 8 years of experience in crafting modern web
+          applications, using technologies such as .NET, Go, Python, TypeScript,
+          JavaScript with React, NextJS & Astro{" "}
+          <span className="text-[7pt]">...and HTMX.</span>
         </p>
-        <p className="mt-2 text-gray w-full lg:w-3/4 leading-7 tracking-wide text-lg">
-          I have expertise in designing and developing scalable architectures,
-          mostly on Microsoft&apos;s Azure platform.
+        <p className="mt-2 text-gray w-full lg:w-5/6 leading-7 tracking-wide">
+          I specialize in architecting, designing and developing scalable
+          software solutions on Microsoft Azure and AWS platforms.
         </p>
 
         <section className="flex flex-col lg:flex-row items-start lg:items-center space-y-4 lg:space-y-0 lg:space-x-4 mt-12">
