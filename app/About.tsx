@@ -41,11 +41,11 @@ export const About = () => {
         </div>
       </div>
 
-      <h1 className="mt-12 lg:mt-32 text-3xl font-bold text-gray text-center">
-        My Experience
+      <h1 className="mt-12 lg:mt-56 text-4xl font-bold text-gray text-center">
+        Experience
       </h1>
 
-      <ul className="mt-8 flex flex-col space-y-8 lg:space-y-4">
+      <ul className="mt-12 flex flex-col space-y-8 lg:space-y-4">
         <Experience
           title="Senior Software Developer"
           period="Dec 2023 - Present"

@@ -148,7 +148,7 @@ export const Contact = () => {
     <section id="contact" className="w-full my-40 flex justify-center">
       <div className="w-full flex justify-center items-center">
         <div className="w-full">
-          <h1 className="text-3xl font-bold text-gray-light dark:text-gray-dark text-center">
+          <h1 className="text-4xl font-bold text-gray-light dark:text-gray-dark text-center">
             Get in Touch
           </h1>
 

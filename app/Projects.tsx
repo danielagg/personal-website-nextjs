@@ -4,12 +4,12 @@ import { Card } from "./components/Card";
 
 export const Projects = () => {
   return (
-    <section className="mt-40">
-      <h1 className="text-3xl font-bold text-gray text-center">
+    <section className="mt-56">
+      <h1 className="text-4xl font-bold text-gray text-center">
         Public Projects
       </h1>
 
-      <ul className="mt-8 space-y-8 lg:space-y-4">
+      <div className="mt-12 grid grid-cols-2 gap-8">
         <Project
           key="koople-v2"
           title="Koople UI v2"
@@ -65,7 +65,7 @@ export const Projects = () => {
             },
           ]}
         />
-      </ul>
+      </div>
     </section>
   );
 };
@@ -89,54 +89,52 @@ const Project = ({
       }[];
 }) => {
   return (
-    <li>
-      <Card>
-        <>
-          <div className="flex items-center justify-between space-x-4">
-            {link ? (
-              <a
-                href={link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xl font-bold hover:underline decoration-wavy underline-offset-8 text-primary"
-              >
-                {title}
-              </a>
-            ) : (
-              <h2 className="text-xl font-bold text-primary">{title}</h2>
-            )}
-          </div>
-
-          <p className="text-gray text-sm mt-2">{desc}</p>
-
-          {Array.isArray(githubLinks) ? (
-            <section className="flex items-center space-x-12 pt-4">
-              {githubLinks.map((gh) => {
-                return (
-                  <a
-                    key={gh.label}
-                    className="block text-sm cursor-pointer hover:underline decoration-wavy underline-offset-8 text-primary"
-                    href={gh.link}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {gh.label}
-                  </a>
-                );
-              })}
-            </section>
-          ) : (
+    <Card>
+      <>
+        <div className="flex items-center justify-between space-x-4">
+          {link ? (
             <a
-              className="block pt-4 text-sm cursor-pointer hover:underline decoration-wavy underline-offset-8 text-primary"
-              href={githubLinks.link}
+              href={link}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
+              className="text-xl font-bold hover:underline decoration-wavy underline-offset-8 text-primary"
             >
-              View source on GitHub
+              {title}
             </a>
+          ) : (
+            <h2 className="text-xl font-bold text-primary">{title}</h2>
           )}
-        </>
-      </Card>
-    </li>
+        </div>
+
+        <p className="text-gray text-sm mt-2">{desc}</p>
+
+        {Array.isArray(githubLinks) ? (
+          <section className="flex items-center space-x-12 pt-4">
+            {githubLinks.map((gh) => {
+              return (
+                <a
+                  key={gh.label}
+                  className="block text-sm cursor-pointer hover:underline decoration-wavy underline-offset-8 text-primary"
+                  href={gh.link}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {gh.label}
+                </a>
+              );
+            })}
+          </section>
+        ) : (
+          <a
+            className="block pt-4 text-sm cursor-pointer hover:underline decoration-wavy underline-offset-8 text-primary"
+            href={githubLinks.link}
+            target="_blank"
+            rel="noreferrer"
+          >
+            View source on GitHub
+          </a>
+        )}
+      </>
+    </Card>
   );
 };
