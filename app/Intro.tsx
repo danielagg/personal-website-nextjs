@@ -11,13 +11,13 @@ export const Intro = () => {
         <h1 className="font-bold text-5xl lg:text-7xl text-primary">
           daniel agg
         </h1>
-        <h2 className="text-lg lg:text-2xl mt-1 lg:mt-3 text-primary/80">
+        <h2 className="text-lg lg:text-2xl mt-1 lg:mt-3 text-primary/70">
           senior full stack developer @{" "}
           <a
             href="https://openup.com/"
             target="_blank"
             rel="noreferrer"
-            className="font-bold cursor-pointer underline decoration-wavy underline-offset-8"
+            className="font-bold cursor-pointer underline decoration-wavy underline-offset-8 hover:text-primary"
           >
             OpenUp
           </a>

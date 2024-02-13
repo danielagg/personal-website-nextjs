@@ -104,7 +104,7 @@ const Experience = ({
         <>
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between">
             <div className="flex flex-col lg:flex-row items-start lg:items-center lg:space-x-2">
-              <div className="text-xl font-bold">{title}</div>
+              <div className="text-2xl font-bold">{title}</div>
               <div className="hidden lg:block">@</div>
               <a
                 href={employerUrl}
