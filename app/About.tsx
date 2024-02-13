@@ -41,7 +41,7 @@ export const About = () => {
         </div>
       </div>
 
-      <h1 className="mt-12 lg:mt-56 text-4xl font-bold text-gray text-center">
+      <h1 className="mt-24 lg:mt-56 text-4xl font-bold text-gray text-center">
         Experience
       </h1>
 

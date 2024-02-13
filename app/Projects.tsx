@@ -4,12 +4,12 @@ import { Card } from "./components/Card";
 
 export const Projects = () => {
   return (
-    <section className="mt-56">
+    <section className="mt-24 lg:mt-56">
       <h1 className="text-4xl font-bold text-gray text-center">
         Public Projects
       </h1>
 
-      <div className="mt-12 grid grid-cols-2 gap-8">
+      <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
         <Project
           key="koople-v2"
           title="Koople UI v2"
