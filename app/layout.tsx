@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 import { Inconsolata } from "next/font/google";
 
-const inter = Inconsolata({ subsets: ["latin"] });
+const customFont = Inconsolata({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Daniel Agg | Full Stack Developer",
@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`w-full relative bg-background text-gray ${inter.className}`}
+        className={`w-full relative bg-background text-gray ${customFont.className}`}
       >
         {children}
       </body>
