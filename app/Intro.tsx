@@ -36,7 +36,6 @@ export const Intro = () => {
 
         <section className="flex flex-col lg:flex-row items-start lg:items-center space-y-4 lg:space-y-0 lg:space-x-4 mt-12">
           <Button onClick={() => window.open("/DanielAgg_CV.pdf")}>
-            {/* todo: */}
             <p className="min-w-[5.5rem]">Download CV</p>
           </Button>
           <Button
